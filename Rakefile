@@ -1,3 +1,3 @@
 task :default do
-  sh "~/bin/latex2pdf whyfp.tex"
+  sh "pdflatex whyfp.tex"
 end
