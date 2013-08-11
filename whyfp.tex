@@ -14,6 +14,13 @@
 
 \usepackage{hyperref}
 
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
 
 \begin{document}
 
@@ -37,6 +44,8 @@ We meet once a month, on the second Monday of the month.
 
 \end{frame}
 
+\section{Introduction}
+
 \begin{frame}{A word from the Wise}
 
 \begin{exampleblock}{}
@@ -59,5 +68,54 @@ should think hard about the decision when it isn’t convenient.
 \includegraphics[scale=0.4]{img/quake.png}
 \end{frame}
 
+\section{Definition of Functional Programming (attempt \#1)}
+
+\begin{frame}{}
+So what exactly is Functional Programming?
+\end{frame}
+
+\begin{frame}{Functional Programming (noun):}
+
+\begin{exampleblock}{}
+  {\large ``
+Functional Programming is a list of things you CAN’T do.
+  ''}
+  \vskip5mm
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+When programming in a functional style/language:
+  \begin{itemize}[<+->]
+        \item You can't vary your variables.
+        \item You can't mutate or change your state.
+        \item No while/for loops, sorry.
+        \item You can't have side-effects.
+        \item You can't control the order of execution (lazy evaluated
+          languages).
+        \end{itemize}
+\end{frame}
+
+\begin{frame}{You can't use GOTO}
+Compare these restrictions to Dijkstra's
+``Go To Statement Considered Harmful''.
+\end{frame}
+
+\begin{frame}{}
+We need a better definition.
+\end{frame}
+
+\section{Definition of Functional Programming (attempt \#1)}
+
+\begin{frame}{Functional Programming (noun):}
+
+\begin{exampleblock}{}
+  {\large ``
+
+  ''}
+  \vskip5mm
+  \hspace*\fill{\small--- John Hughes, Why Functional Programming Matters}
+\end{exampleblock}
+\end{frame}
 
 \end{document}
