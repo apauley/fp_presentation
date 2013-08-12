@@ -1,3 +1,3 @@
 task :default do
-  sh "pdflatex whyfp.tex && pdflatex whyfp.tex"
+  sh "pdflatex fp_intro.tex && pdflatex fp_intro.tex"
 end
