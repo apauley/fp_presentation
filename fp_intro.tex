@@ -90,13 +90,25 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{You can't use GOTO}
-  Compare these restrictions to Dijkstra's
-  ``Go To Statement Considered Harmful''.
+\begin{frame}{GOTO 10}
+  \begin{exampleblock}{}
+    This sounds like
+    {\large ``You can't have GOTO statements''}
+  \vskip5mm
+  \hspace*\fill{\small See Hughes and Dijkstra \cite{whyfp, dijkstra}}
+  \end{exampleblock}
+
+  \begin{itemize}[<+->]
+  \item Also framed in the negative (you can't).
+  \item In hindsight we don't really need GOTO's.
+  \item In hindsight it is not about what you cannot do.
+  \item Benefits of structured procedures with fixed entry/exit points
+    has to do with modularity/abstractions etc.
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{}
-We need a better definition.
+  We need a better definition for Functional Programming.
 \end{frame}
 
 \section{Definition of Functional Programming (attempt \#2)}
@@ -128,6 +140,10 @@ OK... so what exactly is a function?
       John Carmack
       \newblock Functional Programming in C++
       \newblock \url{http://www.altdevblogaday.com/2012/04/26/functional-programming-in-c/}
+    \bibitem{dijkstra}
+      Edsger W. Dijkstra
+      \newblock Go To Statement Considered Harmful
+      \newblock \url{http://www.u.arizona.edu/~rubinson/copyright_violations/Go_To_Considered_Harmful.html}
   \end{thebibliography}
 \end{frame}
 
