@@ -135,44 +135,40 @@
 OK... so what exactly is a function?
 \end{frame}
 
-\begin{frame}{A function}
+\begin{frame}{An example function}
 
   {\Huge $f(x) = 2x + 3$}
 
 \end{frame}
 
-\begin{frame}{A function}
-  \begin{block}
-    {\Huge $f(x) = 2x + 3$}
-  \end{block}
+\begin{frame}{Variables in functions}
+
+  {\Huge $f(x) = 2x + 3$}
 
 When we evaluate the function:
   \begin{itemize}[<+->]
     \item $f(4) = 2*4 + 3 = 11$
     \item The value of $x$ will not change inside the function body.
     \item No $x = 4$ and later $x = 21$ in the same function body.
-    \item Same input, same output. Every time. (Referential Transparency)
+    \item Same input, same output. Every time.
+    \item In other words, we can replace any occurrence of $f(4)$ with
+      $11$ (Referential Transparency)
   \end{itemize}
 \end{frame}
 
 
-\begin{frame}{Functions}
+\begin{frame}{Functions can call other functions}
 
-  {\large Functions can call other functions:}
+  {\Huge $g(x) = f(x) +1 $}
 
-  \begin{block}
-    {\Huge $g(x) = f(x) +1 $}
-  \end{block}
 \end{frame}
 
-
-\begin{frame}{Functions}
+\begin{frame}{Values are functions}
 
   {\large Constant values are just functions with no input parameters}
+  \\
+  {\Huge $k = 42$}
 
-  \begin{block}
-    {\Huge $k = 42$}
-  \end{block}
 \end{frame}
 
 %% References
