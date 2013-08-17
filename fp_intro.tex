@@ -344,7 +344,7 @@ Function definition:
 
 \subsection{Pattern Matching}
 
-\begin{frame}[fragile]{Pattern Matching: Haskell}
+\begin{frame}{Pattern Matching: Haskell}
 
   \lstinputlisting[language=Haskell, firstline=3,lastline=5]{code/doubleall_recursion.hs}
 
@@ -352,13 +352,13 @@ Function definition:
 
 \subsection{Higher-order Functions}
 
-\begin{frame}[fragile]{Higher-order functions: Python}
+\begin{frame}{Higher-order functions: Python}
 
   \lstinputlisting[language=Python, firstline=3,lastline=10]{code/higher_order.py}
 
 \end{frame}
 
-\begin{frame}[fragile]{Higher-order functions: Haskell}
+\begin{frame}{Higher-order functions: Haskell}
 
   \lstinputlisting[language=Haskell, firstline=3,lastline=8]{code/higher_order.hs}
 
@@ -366,6 +366,22 @@ Function definition:
 
 
 \subsection{List Comprehensions}
+
+\begin{frame}[fragile]{List Comprehensions}
+
+Python:
+  \begin{lstlisting}[language=Python]
+>>> [x*2 for x in range(1,5)]
+[2, 4, 6, 8]
+  \end{lstlisting}
+
+Haskell:
+  \begin{lstlisting}[language=Haskell]
+Prelude> [x*2 | x <- [1..5]]
+[2,4,6,8,10]
+  \end{lstlisting}
+
+\end{frame}
 
 \section{References}
 
