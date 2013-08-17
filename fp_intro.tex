@@ -25,6 +25,13 @@
 
 \begin{document}
 
+\lstset{language=Python,
+  basicstyle=\ttfamily\bfseries,
+  commentstyle=\color{red}\itshape,
+  stringstyle=\color{green},
+  showstringspaces=false,
+  keywordstyle=\color{blue}\bfseries}
+
 \begin{frame}
   \titlepage
 \end{frame}
@@ -270,16 +277,38 @@ When we evaluate the function:
 
 \begin{frame}{High Cohesion, Low Coupling}
 
-  \begin{description}
+  \begin{description}[<+->]
   \item[High Cohesion] Related concepts are grouped together.
-  \item[Low Coupling] Changes in one part of a program does not affect
-    other parts.
+  \item[Low Coupling] Changes in one part of a program does not
+    affect other parts.
   \end{description}
 \end{frame}
 
+\begin{frame}{A thought experiment}
 
-%% References
-\begin{frame}[allowframebreaks]
+  {\Huge What happens if we take low coupling to the extreme?}
+
+\end{frame}
+
+\begin{frame}[fragile]{Coupling in OO and FP}
+
+  \begin{description}[<+->]
+  \item[OO] An object couples state (data) and behaviour.
+    \begin{lstlisting}
+      person.age()
+    \end{lstlisting}
+  \item[FP] Functions define behaviour. State is decoupled, typically
+    passed as parameters to functions.
+    \begin{lstlisting}
+      age(person)
+    \end{lstlisting}
+  \end{description}
+
+\end{frame}
+
+\section{References}
+
+\begin{frame}[allowframebreaks]{References}
   \begin{thebibliography}{10}
     \bibitem{whyfp}
       John Hughes
