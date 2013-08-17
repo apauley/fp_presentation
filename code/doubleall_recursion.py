@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 def doubleAll(numbers):
     if not numbers:
         return []
