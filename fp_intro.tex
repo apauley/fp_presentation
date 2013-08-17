@@ -218,6 +218,66 @@ When we evaluate the function:
   \lstinputlisting[language=Python, firstline=3, lastline=8]{code/justfunctions.py}
 \end{frame}
 
+\section{Object-Oriented Programming and Functional Programming}
+
+\begin{frame}
+
+  \begin{exampleblock}{}
+    {\Large ``
+      OO makes code understandable by encapsulating
+      moving parts.
+      FP makes code understandable by minimizing moving
+      parts.
+      ''}
+    \vskip5mm
+    \hspace*\fill{\small--- Michael Feathers, @mfeathers \cite{mfeathers}}
+  \end{exampleblock}
+
+\end{frame}
+
+\subsection{Overlap between FP and OO}
+
+\begin{frame}{Overlap between FP and OO}
+
+  {\Large Adherents of both OO and FP are driven by a lot of the same
+    concerns.}
+
+  \begin{itemize}[<+->]
+  \item {\Large How can we best write stable and bug-free programs?}
+  \item {\Large How can we best write maintainable code?}
+  \item {\Large What are the basic building blocks of our software?}
+  \item {\Large How can we combine these building blocks to build big
+    systems?}
+  \item etc.
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Overlap between FP and OO}
+
+  {\Large Some principles that are valued by both Object-Oriented
+    Programming and Functional Programming:}
+
+  \begin{itemize}[<+->]
+  \item DRY (Don't Repeat Yourself)
+  \item Separation of Concerns
+  \item High Cohesion, Low Coupling
+  \item etc.
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{High Cohesion, Low Coupling}
+
+  \begin{description}
+  \item[High Cohesion] Related concepts are grouped together.
+  \item[Low Coupling] Changes in one part of a program does not affect
+    other parts.
+  \end{description}
+\end{frame}
+
+
 %% References
 \begin{frame}[allowframebreaks]
   \begin{thebibliography}{10}
@@ -233,6 +293,9 @@ When we evaluate the function:
       Edsger W. Dijkstra
       \newblock Go To Statement Considered Harmful
       \newblock \url{http://www.u.arizona.edu/~rubinson/copyright_violations/Go_To_Considered_Harmful.html}
+    \bibitem{mfeathers}
+      Tweet by Michael Feathers
+      \newblock \url{https://twitter.com/mfeathers/status/29581296216}
   \end{thebibliography}
 \end{frame}
 
