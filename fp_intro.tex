@@ -25,11 +25,12 @@
 
 \begin{document}
 
-\lstset{language=Python,
+\lstset{
   basicstyle=\ttfamily\bfseries,
   commentstyle=\color{red}\itshape,
   stringstyle=\color{green},
   showstringspaces=false,
+  numbers=left,
   keywordstyle=\color{blue}\bfseries}
 
 \begin{frame}
@@ -305,6 +306,39 @@ When we evaluate the function:
   \end{description}
 
 \end{frame}
+
+\section{Common FP Idioms}
+\subsection{Recursion}
+
+\begin{frame}[fragile]{A recursive function}
+
+Haskell function definition:
+  \lstinputlisting[language=Haskell, firstline=3,lastline=5]{code/doubleall_recursion.hs}
+
+Example use in the interactive interpreter:
+  \begin{lstlisting}[language=Haskell]
+Prelude Main> doubleAll [8,2,3]
+[16,4,6]
+  \end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{A recursive function}
+
+Python function definition:
+  \lstinputlisting[language=Python]{code/doubleall_recursion.py}
+
+Example use in the interactive interpreter:
+  \begin{lstlisting}[language=Python]
+>>> doubleAll([8,2,3])
+[16, 4, 6]
+  \end{lstlisting}
+
+\end{frame}
+
+\subsection{Pattern Matching}
+\subsection{Higher-order Functions}
+\subsection{List Comprehensions}
 
 \section{References}
 
