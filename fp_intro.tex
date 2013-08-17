@@ -159,7 +159,12 @@ When we evaluate the function:
 
 \begin{frame}{Functions can call other functions}
 
-  {\Huge $g(x) = f(x) +1 $}
+  \begin{itemize}[<+->]
+  \item {\Huge $g(x) = f(x) + 1$}
+  \item {\Huge $f(x) = 2x + 3$}
+  \item {\Huge $g(x) = (2x + 3) + 1$}
+  \item {\Huge $g(x) = 2x + 4$}
+  \end{itemize}
 
 \end{frame}
 
@@ -168,6 +173,46 @@ When we evaluate the function:
   {\large Constant values are just functions with no input parameters}
   \\
   {\Huge $k = 42$}
+
+\end{frame}
+
+\begin{frame}{Functions can be combined}
+
+  \begin{itemize}[<+->]
+  \item {\Huge $h(x) = f(g(x))$}
+  \item {\Huge $h(5) = f(2(5) + 4)$}
+  \item {\Huge $h(5) = f(14)$}
+  \item {\Huge $h(5) = 2(14) + 3$}
+  \item {\Huge $h(5) = 31$}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Higher-order Functions}
+
+  {\Large Functions can take functions as input and/or return
+    functions as the result.}
+
+  \begin{itemize}[<+->]
+  \item {\Huge $h(p, q, x) = p(x) + q(2)$}
+  \item {\Huge $h(f, g, 3) = f(3) + g(2)$}
+  %% \item {\Huge $h(f, g, x) = (2x + 3) + (2(2) + 4)$}
+  %% \item {\Huge $h(f, g, x) = (2x + 3) + 8$}
+  %% \item {\Huge $h(f, g, x) = 2x + 11$}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Functional Programming (noun):}
+
+  \begin{exampleblock}{}
+    {\Large ``
+      Functional programming is so called because a program consists entirely of functions.
+      ''}
+    \vskip5mm
+    \hspace*\fill{\small--- John Hughes, Why Functional Programming
+      Matters \cite[p.~1]{whyfp}}
+  \end{exampleblock}
 
 \end{frame}
 
