@@ -116,13 +116,23 @@
   \item Also framed in the negative (you can't).
   \item In hindsight we don't really need GOTO's.
   \item In hindsight it is not about what you cannot do.
-  \item Benefits of structured procedures with fixed entry/exit points
-    has to do with modularity/abstractions etc.
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Structured Programming and Functional Programming}
+  \begin{description}[<+->]
+  \item[Structured Programming] introduced subroutines with fixed
+    entry/exit points (instead of GOTO's), resulting in improved
+    modularity.
+  \item[Functional Programming] provides similar important benefits --
+    more about this later.
+  \end{description}
+\end{frame}
+
 \begin{frame}{}
+
   {\Large We need a better definition for Functional Programming.}
+
 \end{frame}
 
 \section{Definition of Functional Programming (attempt \#2)}
@@ -169,12 +179,7 @@ When we evaluate the function:
 
 \begin{frame}{Functions can call other functions}
 
-  \begin{itemize}[<+->]
-  \item {\Huge $g(x) = f(x) + 1$}
-  \item {\Huge $f(x) = 2x + 3$}
-  \item {\Huge $g(x) = (2x + 3) + 1$}
-  \item {\Huge $g(x) = 2x + 4$}
-  \end{itemize}
+  {\Huge $g(x) = f(x) + 1$}
 
 \end{frame}
 
@@ -188,13 +193,7 @@ When we evaluate the function:
 
 \begin{frame}{Functions can be combined}
 
-  \begin{itemize}[<+->]
-  \item {\Huge $h(x) = f(g(x))$}
-  \item {\Huge $h(5) = f(2(5) + 4)$}
-  \item {\Huge $h(5) = f(14)$}
-  \item {\Huge $h(5) = 2(14) + 3$}
-  \item {\Huge $h(5) = 31$}
-  \end{itemize}
+  {\Huge $h(x) = f(g(x))$}
 
 \end{frame}
 
@@ -206,9 +205,6 @@ When we evaluate the function:
   \begin{itemize}[<+->]
   \item {\Huge $h(p, q, x) = p(x) + q(2)$}
   \item {\Huge $h(f, g, 3) = f(3) + g(2)$}
-  %% \item {\Huge $h(f, g, x) = (2x + 3) + (2(2) + 4)$}
-  %% \item {\Huge $h(f, g, x) = (2x + 3) + 8$}
-  %% \item {\Huge $h(f, g, x) = 2x + 11$}
   \end{itemize}
 
 \end{frame}
@@ -372,8 +368,8 @@ Function definition:
 
 Python:
   \begin{lstlisting}[language=Python]
->>> [x*2 for x in range(1,5)]
-[2, 4, 6, 8]
+>>> [x*2 for x in range(1,6)]
+[2, 4, 6, 8, 10]
   \end{lstlisting}
 
 Haskell:
@@ -388,15 +384,15 @@ Prelude> [x*2 | x <- [1..5]]
 
 \begin{frame}{3 Basic List Operations}
 
-  \begin{itemize}[<+->]
-  \item Convert each element of a list into some other value.
+  \begin{description}[<+->]
+  \item[Map] Convert each element of a list into some other value.
     Example: Convert a list of students to a list of phone numbers.
-  \item Get a subset of a list based on some condition.
+  \item[Filter] Get a subset of a list based on some condition.
     Example: Filter the entire list of students down to only those
     that passed the exam.
-  \item Reduce a list of items to a single value.
+  \item[Fold] Reduce a list of items to a single value.
     Example: Reduce the list of exam percentages to the average percentage.
-  \end{itemize}
+  \end{description}
 
 \end{frame}
 
