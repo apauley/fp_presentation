@@ -1,5 +1,5 @@
-import System.Environment
-import Data.List
+import System.Environment (getArgs)
+import Data.List (intercalate)
 
 main :: IO()
 main = do
@@ -7,4 +7,5 @@ main = do
     let result = do_something_with_args args
     putStrLn result
 
+do_something_with_args :: [[Char]] -> [Char]
 do_something_with_args args = intercalate "-" args
