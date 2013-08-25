@@ -324,29 +324,33 @@ When we evaluate the function:
 \section{Common FP Idioms}
 \subsection{Recursion}
 
+
 \begin{frame}[fragile]{Recursive function: Haskell}
 
-Haskell function definition:
-  \lstinputlisting[language=Haskell, firstline=3,lastline=5]{code/doubleall_recursion.hs}
+  \inputminted[firstline=3,lastline=5]{haskell}{code/doubleall_recursion.hs}
+
+  \vskip5mm
 
 Example use in the interactive interpreter:
-  \begin{lstlisting}[language=Haskell]
+  \begin{minted}{haskell}
 Prelude Main> doubleAll [8,2,3]
 [16,4,6]
-  \end{lstlisting}
+  \end{minted}
 
 \end{frame}
 
 \begin{frame}[fragile]{Recursive function: Python}
 
-Function definition:
-  \lstinputlisting[language=Python, firstline=3]{code/doubleall_recursion.py}
+  \inputminted[firstline=3]{python}{code/doubleall_recursion.py}
+
+  \vskip5mm
 
 Example use in the interactive interpreter:
-  \begin{lstlisting}[language=Python]
+
+  \begin{minted}{python}
 >>> doubleAll([8,2,3])
 [16, 4, 6]
-  \end{lstlisting}
+  \end{minted}
 
 \end{frame}
 
