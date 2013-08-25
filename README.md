@@ -6,8 +6,10 @@ If you have rake installed you can generate the pdf by typing "rake" in the top-
 
 I used BasicTex, a subset of the MacTex distribution, and then installed the following packages seperately:
 
+```bash
 $ sudo easy_install Pygments
 $ sudo tlmgr install minted
 $ sudo tlmgr install ifplatform
+```
 
 http://tug.org/mactex/morepackages.html
