@@ -13,3 +13,6 @@ code/*.pyc
 code/doubleall_recursion
 code/higher_order
 code/justfunctions
+code/studentmap
+code/studentfilter
+code/studentfold

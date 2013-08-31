@@ -424,13 +424,72 @@ Prelude> [x*2 | x <- [1..5]]
 
   \begin{description}[<+->]
   \item[Map] Convert each element of a list into some other value.
-    Example: Convert a list of students to a list of phone numbers.
+    Example: Convert a list of students to a list of exam scores.
   \item[Filter] Get a subset of a list based on some condition.
     Example: Filter the entire list of students down to only those
     that passed the exam.
   \item[Fold] Reduce a list of items to a single value.
-    Example: Reduce the list of exam percentages to the average percentage.
+    Example: Reduce the list of students to a single string of all
+    names.
   \end{description}
+
+\end{frame}
+
+\begin{frame}{Student Data}
+
+  \inputminted[firstline=1,lastline=3]{haskell}{code/studentfilter.hs}
+
+\end{frame}
+
+
+\begin{frame}{Student Data}
+
+  \inputminted[firstline=9,lastline=20,gobble=11]{haskell}{code/studentmap.hs}
+
+\end{frame}
+
+\begin{frame}[fragile]{Map}
+
+  \inputminted[firstline=6,lastline=7]{haskell}{code/studentmap.hs}
+
+  \vskip5mm
+
+Output:
+  \begin{verbatim}
+Final Exam Scores: [60.0,49.1,89.0,29.3]
+  \end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]{Filter}
+
+  \inputminted[firstline=8,lastline=12]{haskell}{code/studentfilter.hs}
+
+  \vskip5mm
+
+Output:
+  \begin{verbatim}
+Students that have passed:
+[John Deer (60.0),Jane Doe (89.0)]
+  \end{verbatim}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Fold}
+
+  \inputminted[firstline=10,lastline=13]{haskell}{code/studentfold.hs}
+
+  \vskip5mm
+
+Output:
+  \begin{verbatim}
+Student names:
+John
+Billy
+Jane
+Jack
+  \end{verbatim}
 
 \end{frame}
 
