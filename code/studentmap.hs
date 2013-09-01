@@ -4,7 +4,7 @@ data Student = Student { firstName      :: String
                        deriving Show
 
 allscores :: [Student] -> [Double]
-allscores = map finalExamScore
+allscores students = map finalExamScore students
 
 students = [Student {firstName="John",
                      lastName="Deer",

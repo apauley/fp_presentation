@@ -6,7 +6,7 @@ instance Show Student where
          show (Student firstName lastName score) = unwords [firstName, lastName, "("++ show score ++ ")"]
 
 passed :: [Student] -> [Student]
-passed = filter has_passed
+passed students = filter has_passed students
 
 has_passed :: Student -> Bool
 has_passed student = finalExamScore student >= 60
