@@ -11,7 +11,6 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage{listings}
 \usepackage{minted}
 
 \usepackage{hyperref}
@@ -25,14 +24,6 @@
 }
 
 \begin{document}
-
-\lstset{
-  basicstyle=\ttfamily\bfseries,
-  commentstyle=\color{red}\itshape,
-  stringstyle=\color{green},
-  showstringspaces=false,
-  numbers=left,
-  keywordstyle=\color{blue}\bfseries}
 
 \begin{frame}
   \titlepage
@@ -312,13 +303,13 @@ Example use in the interactive interpreter:
 
 \begin{frame}{Higher-order functions: Python}
 
-  \lstinputlisting[language=Python, firstline=3,lastline=10]{code/higher_order.py}
+  \inputminted[firstline=3,lastline=10]{python}{code/higher_order.py}
 
 \end{frame}
 
 \begin{frame}{Higher-order functions: Haskell}
 
-  \lstinputlisting[language=Haskell, firstline=3,lastline=8]{code/higher_order.hs}
+  \inputminted[firstline=3,lastline=8]{haskell}{code/higher_order.hs}
 
 \end{frame}
 
@@ -328,16 +319,16 @@ Example use in the interactive interpreter:
 \begin{frame}[fragile]{List Comprehensions}
 
 Python:
-  \begin{lstlisting}[language=Python]
+  \begin{minted}{python}
 >>> [x*2 for x in range(1,6)]
 [2, 4, 6, 8, 10]
-  \end{lstlisting}
+  \end{minted}
 
 Haskell:
-  \begin{lstlisting}[language=Haskell]
+  \begin{minted}{haskell}
 Prelude> [x*2 | x <- [1..5]]
 [2,4,6,8,10]
-  \end{lstlisting}
+  \end{minted}
 
 \end{frame}
 
