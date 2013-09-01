@@ -7,5 +7,5 @@ main = do
     let result = do_something_with_args args
     putStrLn result
 
-do_something_with_args :: [[Char]] -> [Char]
+do_something_with_args :: [String] -> String
 do_something_with_args args = intercalate "-" args

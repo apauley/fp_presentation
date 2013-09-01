@@ -76,11 +76,11 @@
     evaluation. Dynamic typing. Runs on the JVM.
   \item [Scala] FP and OO. Strict evaluation by default,
     but supports lazy evaluation. Advanced static type system. Runs on the JVM.
-  \item [F\#] FP and OO. Strict evaluation by default,
+  \item [OCaml] FP and OO. Part of the ML family. Sometimes claimed to be ``faster
+    than C''. Strict evaluation. Advanced static type system. Native-code compiler.
+  \item [F\#] FP and OO. Based on OCaml. Strict evaluation by default,
     but supports lazy evaluation. Advanced static type system. Runs on
     the .NET CLR.
-  \item [OCaml] Part of the ML family. Sometimes claimed to be ``faster
-    than C''. Strict evaluation. Advanced static type system. Native-code compiler.
   \end{description}
 
 \end{frame}
@@ -163,15 +163,17 @@
 \end{exampleblock}
 \end{frame}
 
-\section{Function Recap}
-
 \begin{frame}{}
 OK... so what exactly is a function?
 \end{frame}
 
+\section{Function Recap}
+
 \begin{frame}{An example function}
 
   {\Huge $f(x) = 2x + 3$}
+
+  \includegraphics[scale=0.5]{img/fx2x3.png}
 
 \end{frame}
 
@@ -199,13 +201,18 @@ When we evaluate the function:
 
 \end{frame}
 
-\begin{frame}{Values are functions}
+\begin{frame}[fragile]{Values are functions}
 
   {\large Constant values are just functions with no input parameters}
 
   \vskip5mm
 
   {\Huge $k = 42$}
+
+  \begin{minted}{python}
+def k():
+    return 42
+  \end{minted}
 
 \end{frame}
 
@@ -231,8 +238,7 @@ When we evaluate the function:
 
 \begin{frame}{Higher-order Functions}
 
-  {\Large Functions can take functions as input and/or return
-    functions as the result.}
+  {\Large The derivative of $cos(x)$ returns another function.}
 
   \vskip5mm
 
@@ -242,23 +248,22 @@ When we evaluate the function:
 
 \begin{frame}{A functional program consists entirely of functions}
 
-  \inputminted[firstline=3]{python}{code/justfunctions.py}
+  \inputminted[firstline=5,lastline=10]{python}{code/justfunctions.py}
 
 \end{frame}
 
 \begin{frame}{A functional program consists entirely of functions}
 
-  \inputminted{haskell}{code/justfunctions.hs}
+  \inputminted[firstline=4]{haskell}{code/justfunctions.hs}
 
 \end{frame}
 
 \section{Common FP Idioms}
 \subsection{Recursion}
 
-
 \begin{frame}[fragile]{Recursive function: Haskell}
 
-  \inputminted[firstline=3,lastline=5]{haskell}{code/doubleall_recursion.hs}
+  \inputminted[lastline=3]{haskell}{code/doubleall_recursion.hs}
 
   \vskip5mm
 
@@ -295,7 +300,7 @@ Example use in the interactive interpreter:
 
 \begin{frame}{Pattern Matching: Haskell}
 
-  \inputminted[firstline=3,lastline=5]{haskell}{code/doubleall_recursion.hs}
+  \inputminted[lastline=3]{haskell}{code/doubleall_recursion.hs}
 
 \end{frame}
 
@@ -309,7 +314,7 @@ Example use in the interactive interpreter:
 
 \begin{frame}{Higher-order functions: Haskell}
 
-  \inputminted[firstline=3,lastline=8]{haskell}{code/higher_order.hs}
+  \inputminted[lastline=5]{haskell}{code/higher_order.hs}
 
 \end{frame}
 

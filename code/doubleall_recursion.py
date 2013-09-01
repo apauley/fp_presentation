@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 def doubleAll(numbers):
-    if not numbers:
+    if numbers == []:
         return []
     else:
         first = numbers[0]
