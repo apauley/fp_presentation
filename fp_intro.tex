@@ -355,6 +355,28 @@ Example use in the interactive interpreter:
 
 \end{frame}
 
+\begin{frame}[fragile]{Map}
+
+  \inputminted[lastline=3]{haskell}{code/doubleall_recursion.hs}
+
+  \vskip5mm
+
+Looks very similar to the builtin map function:
+  \begin{minted}{haskell}
+map :: (a -> b) -> [a] -> [b]
+map _ [] = []  
+map f (x:xs) = f x : map f xs
+  \end{minted}
+
+  \vskip5mm
+
+So our doubleAll can actually be simplified as:
+  \begin{minted}{haskell}
+doubleAll = map (*2)
+  \end{minted}
+
+\end{frame}
+
 \begin{frame}{Student Data}
 
   \inputminted[firstline=1,lastline=3]{haskell}{code/studentfilter.hs}
@@ -370,6 +392,14 @@ Example use in the interactive interpreter:
 
 \begin{frame}[fragile]{Map}
 
+Map type signature:
+  \begin{minted}{haskell}
+map :: (a -> b) -> [a] -> [b]
+  \end{minted}
+
+  \vskip5mm
+
+Map on student data:
   \inputminted[firstline=6,lastline=7]{haskell}{code/studentmap.hs}
 
   \vskip5mm
@@ -383,6 +413,14 @@ Final Exam Scores: [60.0,49.1,89.0,29.3]
 
 \begin{frame}[fragile]{Filter}
 
+Filter type signature:
+  \begin{minted}{haskell}
+filter :: (a -> Bool) -> [a] -> [a]
+  \end{minted}
+
+  \vskip5mm
+
+Filter on student data:
   \inputminted[firstline=8,lastline=12]{haskell}{code/studentfilter.hs}
 
   \vskip5mm
@@ -398,17 +436,21 @@ Students that have passed:
 
 \begin{frame}[fragile]{Fold}
 
+Fold type signature:
+  \begin{minted}{haskell}
+foldl :: (a -> b -> a) -> a -> [b] -> a
+  \end{minted}
+
+  \vskip5mm
+
+Fold on student data:
   \inputminted[firstline=10,lastline=13]{haskell}{code/studentfold.hs}
 
   \vskip5mm
 
 Output:
   \begin{verbatim}
-Student names:
-John
-Billy
-Jane
-Jack
+"John\nBilly\nJane\nJack\n"
   \end{verbatim}
 
 \end{frame}

@@ -9,9 +9,9 @@ students = [Student {firstName="John",  lastName="Deer",    finalExamScore=60},
 
 namecat :: [Student] -> String
 namecat students = foldl catfun "" students
-        where catfun = (\ acc student ->
+        where catfun = (\acc student ->
                      acc ++ (firstName student) ++ "\n")
 
 main :: IO()
 main = do
-    putStrLn $ "Student names:\n" ++ (namecat students)
+    putStrLn $ "Student names:\n" ++ show (namecat students)
