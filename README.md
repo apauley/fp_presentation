@@ -13,6 +13,7 @@ I used BasicTex, a subset of the MacTex distribution, and then installed the fol
 $ sudo easy_install Pygments
 $ sudo tlmgr install minted
 $ sudo tlmgr install ifplatform
+$ sudo tlmgr install pgfplots
 ```
 
 http://tug.org/mactex/morepackages.html

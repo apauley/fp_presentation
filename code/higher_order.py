@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 def f(x):
-    return (2*x) + 3
+    return (2 * x**2) - (2 * x) + 3
 
 def g(x):
     return f(x) + 1

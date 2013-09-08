@@ -1,4 +1,4 @@
-f x = (2*x) + 3
+f x = (2 * x^2) - (2 * x) + 3
 g x = (f x) + 1
 
 h :: (Int->Int) -> (Int->Int) -> Int -> Int
