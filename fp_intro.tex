@@ -199,7 +199,7 @@ When we evaluate the function:
   \begin{itemize}[<+->]
     \item $f(2) = 8 - 4 + 3 = 7$
     \item The value of $x$ will not change inside the function body.
-    \item No $x = 2$ and later $x = 21$ in the same function body.
+    \item No $x = 2$ and later $x = 71$ in the same function body.
     \item Same input, same output. Every time.
     \item In other words, we can replace any occurrence of $f(2)$ with
       $7$ (Referential Transparency)
@@ -276,23 +276,23 @@ x = 42
 
 \begin{frame}[fragile]{A functional program consists entirely of functions}
 
-  \inputminted[firstline=5,lastline=10]{python}{code/justfunctions.py}
-
   \begin{verbatim}
-./justfunctions.py hello functional programming
-hello-functional-programming
+./justfunctions.py Hello FP from Python
+2013-09-11 23:18:20.569190 Hello-FP-from-Python
   \end{verbatim}
+
+  \inputminted[firstline=6,lastline=12]{python}{code/justfunctions.py}
 
 \end{frame}
 
 \begin{frame}[fragile]{A functional program consists entirely of functions}
 
-  \inputminted[firstline=4]{haskell}{code/justfunctions.hs}
-
   \begin{verbatim}
-./justfunctions hello functional programming
-hello-functional-programming
+./justfunctions Hello FP from Haskell
+2013-09-11 21:18:52.346109 UTC Hello-FP-from-Haskell
   \end{verbatim}
+
+  \inputminted[firstline=5]{haskell}{code/justfunctions.hs}
 
 \end{frame}
 
