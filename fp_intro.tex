@@ -115,7 +115,6 @@ middle, xlabel={$x$}, ylabel={$y$}}}
 \end{frame}
 
 \begin{frame}
-  When programming in a functional style/language:
   \begin{itemize}[<+->]
   \item You can't vary your variables.
   \item You can't mutate or change your state.
@@ -280,23 +279,23 @@ x = 42
 
 \begin{frame}[fragile]{A functional program consists entirely of functions}
 
+  \inputminted[firstline=6,lastline=12]{python}{code/justfunctions.py}
+
   \begin{verbatim}
-/justfunctions.py Hello from Python
+$ ./justfunctions.py Hello from Python
 2013-09-12 08:42:18.848911 Hello-from-Python
   \end{verbatim}
-
-  \inputminted[firstline=6,lastline=12]{python}{code/justfunctions.py}
 
 \end{frame}
 
 \begin{frame}[fragile]{A functional program consists entirely of functions}
 
+  \inputminted[firstline=5]{haskell}{code/justfunctions.hs}
+
   \begin{verbatim}
-./justfunctions Hello from Haskell
+$ ./justfunctions Hello from Haskell
 2013-09-12 06:42:28.404142 UTC Hello-from-Haskell
   \end{verbatim}
-
-  \inputminted[firstline=5]{haskell}{code/justfunctions.hs}
 
 \end{frame}
 
