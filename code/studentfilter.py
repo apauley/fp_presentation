@@ -2,8 +2,8 @@
 
 class Student:
     def __init__(self, firstname, lastname, finalexamscore):
-        self.firstname = firstname
-        self.lastname = lastname
+        self.firstname      = firstname
+        self.lastname       = lastname
         self.finalexamscore = finalexamscore
 
     def has_passed(self):
