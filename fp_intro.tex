@@ -1,8 +1,11 @@
 \documentclass{beamer}
 
-%% \usetheme{Warsaw}
-\usetheme{EastLansing}
-%% \usecolortheme{beetle}
+\usetheme{Singapore}
+%%\usetheme{Berkeley}
+%% \usetheme{Marburg}
+%% \usetheme{PaloAlto}
+
+\usecolortheme{dolphin}
 
 \title[Functional Programming]{An Introduction to Functional Programming}
 \author{Andreas Pauley -- @apauley \\ Lambda Luminaries}
@@ -95,7 +98,7 @@ middle, xlabel={$x$}, ylabel={$y$}}}
 
 \end{frame}
 
-\section{Definition of Functional Programming}
+\section{Definition}
 
 \begin{frame}{}
 
@@ -106,9 +109,9 @@ middle, xlabel={$x$}, ylabel={$y$}}}
 \begin{frame}{Functional Programming, noun:}
 
   \begin{exampleblock}{}
-    {\Huge ``
+    {\Huge
       Functional Programming is a list of things you CAN’T do.
-      ''}
+      }
     \vskip5mm
     \hspace*\fill{\small \cite{pauleyfp}}
   \end{exampleblock}
@@ -279,7 +282,7 @@ x = 42
 
 \begin{frame}[fragile]{A functional program consists entirely of functions}
 
-  \inputminted[firstline=6,lastline=12]{python}{code/justfunctions.py}
+  \inputminted[firstline=6,lastline=13]{python}{code/justfunctions.py}
 
   \begin{verbatim}
 $ ./justfunctions.py Hello from Python
@@ -290,7 +293,7 @@ $ ./justfunctions.py Hello from Python
 
 \begin{frame}[fragile]{A functional program consists entirely of functions}
 
-  \inputminted[firstline=5]{haskell}{code/justfunctions.hs}
+  \inputminted[firstline=6]{haskell}{code/justfunctions.hs}
 
   \begin{verbatim}
 $ ./justfunctions Hello from Haskell
@@ -299,7 +302,7 @@ $ ./justfunctions Hello from Haskell
 
 \end{frame}
 
-\section{Common FP Idioms}
+\section{Common Idioms}
 \subsection{Recursion}
 
 \begin{frame}[fragile]{Recursive function: Haskell}
@@ -371,7 +374,7 @@ Example use in the interactive interpreter:
 
 \end{frame}
 
-\section{Higher-order Functions and Lists}
+\section{Higher-order Functions}
 
 \begin{frame}{3 Basic List Operations}
 
@@ -508,7 +511,7 @@ Output:
 
 \end{frame}
 
-\section{Advantages of Functional Programming}
+\section{Advantages}
 
 \begin{frame}{Perlisism \#19}
 
@@ -537,7 +540,7 @@ Output:
 
 \end{frame}
 
-\section{Disdvantages of Functional Programming}
+\section{Disdvantages}
 
 \begin{frame}{Disadvantages of Functional Programming}
 
@@ -565,7 +568,7 @@ Output:
 
 \end{frame}
 
-\section{Companies using Functional Programming}
+\section{Industry Use}
 
 \begin{frame}{Companies In South Africa}
 
@@ -586,7 +589,7 @@ Output:
 
 \end{frame}
 
-\section{Where do we go from here?}
+\section{Now what?}
 
 \begin{frame}{Lambda Luminaries -- @lambdaluminary}
   \framesubtitle{Local functional programming user group}

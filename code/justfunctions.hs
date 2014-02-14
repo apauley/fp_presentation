@@ -4,7 +4,7 @@ import Data.Time (getCurrentTime)
 
 main :: IO()
 main = do
-    args <- getArgs
+    args      <- getArgs
     timestamp <- getCurrentTime
     let result = show timestamp ++ " " ++ join_args args
     putStrLn result
