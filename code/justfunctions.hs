@@ -1,13 +1,15 @@
 import System.Environment (getArgs)
 import Data.List (intercalate)
-import Data.Time (getCurrentTime)
+import Data.Time (getCurrentTime, UTCTime)
 
 main :: IO()
 main = do
-    args      <- getArgs
-    timestamp <- getCurrentTime
-    let result = show timestamp ++ " " ++ join_args args
-    putStrLn result
+    time <- getCurrentTime
+    args <- getArgs
+    putStrLn (outputString time args)
 
-join_args :: [String] -> String
-join_args args = intercalate "-" args
+outputString :: UTCTime -> [String] -> String
+outputString time args =
+    show time ++ " " ++ joinArgs args
+
+joinArgs args = intercalate "-" args
