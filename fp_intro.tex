@@ -322,7 +322,7 @@ Prelude Main> doubleAll [8,2,3]
 
 \begin{frame}[fragile]{Recursive function: Python}
 
-  \inputminted[firstline=3]{python}{code/doubleall_recursion.py}
+  \inputminted[firstline=3,lastline=9]{python}{code/doubleall_recursion.py}
 
   \vskip5mm
 
@@ -375,43 +375,65 @@ Example use in the interactive interpreter:
 
 \end{frame}
 
-\section{Higher-order List Functions}
+\section{Map, Filter, Fold}
 
 \begin{frame}{3 Basic List Operations}
 
   \begin{description}[<+->]
   \item[Map] Convert each element of a list into some other value.
-    Example: Convert a list of students to a list of exam scores.
+    Example: Convert a list of bank accounts to a list of balance amounts.
   \item[Filter] Get a subset of a list based on some condition.
-    Example: Filter the entire list of students down to only those
-    that passed the exam.
+    Example: Show only those accounts with a balance above one million.
   \item[Fold] Reduce a list of items to a single value.
-    Example: Reduce the list of students to a single string of all
-    names.
+    Example: Get the sum of a list of numbers.
+    Or reduce a list of bank accounts to a map of balances per bank.
   \end{description}
 
 \end{frame}
 
 \begin{frame}[fragile]{Map}
 
-  \inputminted[lastline=3]{haskell}{code/doubleall_recursion.hs}
+The builtin Haskell map function:
 
-  \vskip5mm
-
-Looks very similar to the builtin map function:
   \begin{minted}{haskell}
 map :: (a -> b) -> [a] -> [b]
-map _ [] = []  
+map _ [] = []
+map f (x:xs) = f x : map f xs
+  \end{minted}
+
+\end{frame}
+
+\begin{frame}[fragile]{Map}
+
+The builtin Haskell map function:
+  \begin{minted}{haskell}
+map :: (a -> b) -> [a] -> [b]
+map _ [] = []
 map f (x:xs) = f x : map f xs
   \end{minted}
 
   \vskip5mm
 
-So our doubleAll can actually be simplified as:
+Hmmm, looks very similar to our previous doubleAll function:
+
+  \inputminted[lastline=3]{haskell}{code/doubleall_recursion.hs}
+\end{frame}
+
+\begin{frame}[fragile]{Map}
+
+So our doubleAll can actually be simplified.
+
+  \vskip5mm
+
+In Haskell:
   \begin{minted}{haskell}
 doubleAll = map (*2)
   \end{minted}
 
+  \vskip5mm
+
+In Python:
+  \inputminted[firstline=3,lastline=4]{python}{code/doubleall_map.py}
 \end{frame}
 
 \begin{frame}{Student Data}
