@@ -12,4 +12,5 @@ outputString :: UTCTime -> [String] -> String
 outputString time args =
     show time ++ " " ++ joinArgs args
 
-joinArgs args = intercalate "-" args
+joinArgs :: [String] -> String
+joinArgs = intercalate "-"
