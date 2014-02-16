@@ -1,0 +1,9 @@
+*.hi
+*.o
+*.pyc
+doubleall_recursion
+higher_order
+justfunctions
+studentmap
+studentfilter
+studentfold

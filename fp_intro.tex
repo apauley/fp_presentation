@@ -283,7 +283,7 @@ x = 42
 
 \begin{frame}[fragile]{A functional program consists entirely of functions}
 
-  \inputminted[firstline=6,lastline=15]{python}{code/justfunctions.py}
+  \inputminted[firstline=6,lastline=15]{python}{code/python/justfunctions.py}
 
   \begin{verbatim}
 $ ./justfunctions.py Hello from Python
@@ -294,7 +294,7 @@ $ ./justfunctions.py Hello from Python
 
 \begin{frame}[fragile]{A functional program consists entirely of functions}
 
-  \inputminted[firstline=5]{haskell}{code/justfunctions.hs}
+  \inputminted[firstline=5]{haskell}{code/haskell/justfunctions.hs}
 
   \begin{verbatim}
 $ ./justfunctions Hello from Haskell
@@ -308,7 +308,7 @@ $ ./justfunctions Hello from Haskell
 
 \begin{frame}[fragile]{Recursive function: Haskell}
 
-  \inputminted[lastline=3]{haskell}{code/doubleall_recursion.hs}
+  \inputminted[lastline=3]{haskell}{code/haskell/doubleall_recursion.hs}
 
   \vskip5mm
 
@@ -322,7 +322,7 @@ Prelude Main> doubleAll [8,2,3]
 
 \begin{frame}[fragile]{Recursive function: Python}
 
-  \inputminted[firstline=3,lastline=9]{python}{code/doubleall_recursion.py}
+  \inputminted[firstline=3,lastline=9]{python}{code/python/doubleall_recursion.py}
 
   \vskip5mm
 
@@ -337,7 +337,7 @@ Example use in the interactive interpreter:
 
 \begin{frame}{An iterative version in Python}
 
-  \inputminted[firstline=3]{python}{code/doubleall_iterative.py}
+  \inputminted[firstline=3]{python}{code/python/doubleall_iterative.py}
 
 \end{frame}
 
@@ -345,7 +345,7 @@ Example use in the interactive interpreter:
 
 \begin{frame}{Pattern Matching: Haskell}
 
-  \inputminted[lastline=3]{haskell}{code/doubleall_recursion.hs}
+  \inputminted[lastline=3]{haskell}{code/haskell/doubleall_recursion.hs}
 
 \end{frame}
 
@@ -359,7 +359,7 @@ Example use in the interactive interpreter:
 
   \vskip5mm
 
-  \inputminted[firstline=3,lastline=10]{python}{code/higher_order.py}
+  \inputminted[firstline=3,lastline=10]{python}{code/python/higher_order.py}
 
 \end{frame}
 
@@ -371,7 +371,7 @@ Example use in the interactive interpreter:
 
   \vskip5mm
 
-  \inputminted[lastline=5]{haskell}{code/higher_order.hs}
+  \inputminted[lastline=5]{haskell}{code/haskell/higher_order.hs}
 
 \end{frame}
 
@@ -416,7 +416,7 @@ map f (x:xs) = f x : map f xs
 
 Hmmm, looks very similar to our previous doubleAll function:
 
-  \inputminted[lastline=3]{haskell}{code/doubleall_recursion.hs}
+  \inputminted[lastline=3]{haskell}{code/haskell/doubleall_recursion.hs}
 \end{frame}
 
 \begin{frame}[fragile]{Map}
@@ -433,19 +433,19 @@ doubleAll = map (*2)
   \vskip5mm
 
 In Python:
-  \inputminted[firstline=3,lastline=4]{python}{code/doubleall_map.py}
+  \inputminted[firstline=3,lastline=4]{python}{code/python/doubleall_map.py}
 \end{frame}
 
 \begin{frame}{Student Data}
 
-  \inputminted[firstline=1,lastline=3]{haskell}{code/studentfilter.hs}
+  \inputminted[firstline=1,lastline=3]{haskell}{code/haskell/studentfilter.hs}
 
 \end{frame}
 
 
 \begin{frame}{Student Data}
 
-  \inputminted[firstline=9,lastline=20,gobble=11]{haskell}{code/studentmap.hs}
+  \inputminted[firstline=9,lastline=20,gobble=11]{haskell}{code/haskell/studentmap.hs}
 
 \end{frame}
 
@@ -459,7 +459,7 @@ map :: (a -> b) -> [a] -> [b]
   \vskip5mm
 
 Map on student data:
-  \inputminted[firstline=6,lastline=7]{haskell}{code/studentmap.hs}
+  \inputminted[firstline=6,lastline=7]{haskell}{code/haskell/studentmap.hs}
 
   \vskip5mm
 
@@ -487,7 +487,7 @@ filter :: (a -> Bool) -> [a] -> [a]
   \vskip5mm
 
 Filter on student data:
-  \inputminted[firstline=8,lastline=12]{haskell}{code/studentfilter.hs}
+  \inputminted[firstline=8,lastline=12]{haskell}{code/haskell/studentfilter.hs}
 
   \vskip5mm
 
@@ -510,7 +510,7 @@ foldl :: (a -> b -> a) -> a -> [b] -> a
   \vskip5mm
 
 Fold on student data:
-  \inputminted[firstline=10,lastline=14]{haskell}{code/studentfold.hs}
+  \inputminted[firstline=10,lastline=14]{haskell}{code/haskell/studentfold.hs}
 
   \vskip5mm
 
@@ -523,14 +523,14 @@ Output:
 
 \begin{frame}{Shortened Map, Filter, Fold}
 
-  \inputminted[firstline=8,lastline=15]{haskell}{code/studentmapfilterfoldshort.hs}
+  \inputminted[firstline=8,lastline=15]{haskell}{code/haskell/studentmapfilterfoldshort.hs}
 
 \end{frame}
 
 
 \begin{frame}{Imperative Filter Example}
 
-  \inputminted[firstline=3,lastline=17]{python}{code/studentfilter.py}
+  \inputminted[firstline=3,lastline=17]{python}{code/python/studentfilter.py}
 
 \end{frame}
 
