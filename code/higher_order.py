@@ -6,10 +6,10 @@ def f(x):
 def g(x):
     return f(x) + 1
 
-def h(func_a, func_b, x):
-    return func_a(x) + func_b(2)
+def h(f1, f2):
+    return f1(3) + f2(2)
 
 if __name__ == '__main__':
-    print "f(7) =", f(7)
+    print "f(3) =", f(3)
     print "g(2) =", g(2)
-    print "h(f, g, 7) =", h(f, g, 7)
+    print "h(f, g) =", h(f, g)
