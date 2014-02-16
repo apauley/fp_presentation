@@ -487,15 +487,16 @@ filter :: (a -> Bool) -> [a] -> [a]
 
   \vskip5mm
 
-Filter on student data:
-  \inputminted[firstline=8,lastline=12]{haskell}{code/haskell/studentfilter.hs}
+Filter on account data:
+  \inputminted[firstline=48,lastline=52]{haskell}{code/haskell/accounts.hs}
 
   \vskip5mm
 
 Output:
   \begin{verbatim}
-Students that have passed:
-[John Deer (60.0),Jane Doe (89.0)]
+*Main> loaded accounts
+[FNB 6868773585 (J. Black) R5782347.99,
+ FNB 6584539813 (S. Jones) R2937361.45]
   \end{verbatim}
 
 \end{frame}

@@ -25,19 +25,19 @@ instance Show Account where
          show (Account bank accNum owner balance) = 
               unwords [show bank, accNum,"("++owner++")", show balance]
 
-accounts = [Account {accNum="81423",
+accounts = [Account {accNum="4076814233",
                      owner="J. Doe",
                      balance=(Amount 123000.23),
                      bank=ABSA},
-            Account {accNum="48687", 
+            Account {accNum="6868773585", 
                      owner="J. Black",
                      balance=(Amount 5782347.99),
                      bank=FNB},
-            Account {accNum="62435",
+            Account {accNum="4055892156",
                      owner="A. Kay",
                      balance=(Amount 100),
                      bank=ABSA},
-            Account {accNum="48687",
+            Account {accNum="6584539813",
                      owner="S. Jones",
                      balance=(Amount 2937361.45),
                      bank=FNB}]
