@@ -19,7 +19,7 @@ instance Num Amount where
 data Account = Account {bank    :: Bank
                        ,accNum  :: String
                        ,owner   :: String
-                       ,balance :: Amount }
+                       ,balance :: Amount}
 
 instance Show Account where
          show (Account bank accNum owner balance) = 

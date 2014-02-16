@@ -436,16 +436,16 @@ In Python:
   \inputminted[firstline=3,lastline=4]{python}{code/python/doubleall_map.py}
 \end{frame}
 
-\begin{frame}{Student Data}
+\begin{frame}{Account Data}
 
-  \inputminted[firstline=1,lastline=3]{haskell}{code/haskell/studentfilter.hs}
+  \inputminted[firstline=3,lastline=3]{haskell}{code/haskell/accounts.hs}
+  \inputminted[firstline=19,lastline=22]{haskell}{code/haskell/accounts.hs}
 
 \end{frame}
 
+\begin{frame}{Account Data}
 
-\begin{frame}{Student Data}
-
-  \inputminted[firstline=9,lastline=20,gobble=11]{haskell}{code/haskell/studentmap.hs}
+  \inputminted[firstline=28,lastline=43,gobble=11]{haskell}{code/haskell/accounts.hs}
 
 \end{frame}
 
@@ -458,21 +458,22 @@ map :: (a -> b) -> [a] -> [b]
 
   \vskip5mm
 
-Map on student data:
-  \inputminted[firstline=6,lastline=7]{haskell}{code/haskell/studentmap.hs}
+Map on account data:
+  \inputminted[firstline=45,lastline=46]{haskell}{code/haskell/accounts.hs}
 
   \vskip5mm
 
-finalExamScore type signature:
+balance type signature:
   \begin{minted}{haskell}
-finalExamScore :: Student -> Double
+balance :: Account -> Amount
   \end{minted}
 
   \vskip5mm
 
 Output:
   \begin{verbatim}
-Final Exam Scores: [60.0,49.1,89.0,29.3]
+*Main> balances accounts
+[R123000.23,R5782347.99,R100.0,R2937361.45]
   \end{verbatim}
 
 \end{frame}
