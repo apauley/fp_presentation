@@ -511,24 +511,36 @@ foldl :: (a -> b -> a) -> a -> [b] -> a
 
   \vskip5mm
 
-Fold on student data:
-  \inputminted[firstline=10,lastline=14]{haskell}{code/haskell/studentfold.hs}
+Fold on account data:
+  \inputminted[firstline=54,lastline=55]{haskell}{code/haskell/accounts.hs}
 
   \vskip5mm
 
 Output:
   \begin{verbatim}
-"John\nBilly\nJane\nJack\n"
+*Main> balanceSum accounts
+R8842809.67
   \end{verbatim}
 
 \end{frame}
 
-\begin{frame}{Shortened Map, Filter, Fold}
+\begin{frame}[fragile]{Fold}
 
-  \inputminted[firstline=8,lastline=15]{haskell}{code/haskell/studentmapfilterfoldshort.hs}
+  \inputminted[firstline=54,lastline=59]{haskell}{code/haskell/accounts.hs}
+
+Output:
+  \begin{verbatim}
+*Main> balancesPerBank accounts
+fromList [(ABSA,R123100.23),(FNB,R8719709.44)]
+  \end{verbatim}
 
 \end{frame}
 
+\begin{frame}{Fold}
+
+  \inputminted[firstline=57,lastline=71]{haskell}{code/haskell/accounts.hs}
+
+\end{frame}
 
 \begin{frame}{Imperative Filter Example}
 

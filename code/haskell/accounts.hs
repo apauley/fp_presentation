@@ -1,5 +1,5 @@
+import Data.Map (Map)
 import qualified Data.Map as Map
-
 data Bank = ABSA | Capitec | FNB | Nedbank | SBSA
      deriving (Show, Ord, Eq)
 
@@ -54,18 +54,21 @@ isLoaded account = balance account >= (Amount 1000000)
 balanceSum :: [Account] -> Amount
 balanceSum accounts = foldl (+) 0 (balances accounts)
 
-balancesPerBank :: [Account] -> Map.Map Bank Amount
-balancesPerBank = foldl insertBankBalance Map.empty
+type BankMap = Map Bank Amount
+balancesPerBank :: [Account] -> BankMap
+balancesPerBank = foldl insertBalance Map.empty
 
-insertBankBalance :: Map.Map Bank Amount -> Account -> Map.Map Bank Amount
-insertBankBalance bankmap account = Map.insert key value bankmap
-                          where key   = bank account
-                                value = addBalance account bankmap
+insertBalance :: BankMap -> Account -> BankMap
+insertBalance bankmap account =
+              Map.insert key value bankmap
+              where key   = bank account
+                    value = addBalance bankmap account
 
-addBalance :: Account -> Map.Map Bank Amount -> Amount
-addBalance account bankmap = case (Map.lookup (bank account) bankmap) of
-                                Nothing  -> balance account
-                                Just bal -> (balance account) + bal
+addBalance :: BankMap -> Account -> Amount
+addBalance bankmap account =
+           case (Map.lookup (bank account) bankmap) of
+                Nothing  -> balance account
+                Just bal -> (balance account) + bal
 
 main :: IO ()
 main = do
