@@ -12,7 +12,7 @@ def outputString(time, args):
     return str(time) + " " + joinArgs(args)
 
 def joinArgs(args):
-    return '-'.join(args)
+    return "-".join(args)
 
 if __name__ == '__main__':
     main()

@@ -89,8 +89,8 @@ middle, xlabel={$x$}, ylabel={$y$}}}
     evaluation. Dynamic typing. Runs on the JVM.
   \item [Scala] FP and OO. Strict evaluation by default,
     but supports lazy evaluation. Advanced static type system. Runs on the JVM.
-  \item [OCaml] FP and OO. Part of the ML family. Sometimes claimed to be ``faster
-    than C''. Strict evaluation. Advanced static type system. Native-code compiler.
+  \item [OCaml] FP and OO. Part of the ML family. Strict evaluation.
+    Advanced static type system. Native-code compiler.
   \item [F\#] FP and OO. Based on OCaml. Strict evaluation by default,
     but supports lazy evaluation. Advanced static type system. Runs on
     the .NET CLR.
@@ -117,11 +117,12 @@ middle, xlabel={$x$}, ylabel={$y$}}}
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
   \begin{itemize}[<+->]
   \item You can't vary your variables.
   \item You can't mutate or change your state.
   \item No while/for loops, sorry.
+    \mint{java}|for ( int i=1; i <= 3 ; i++ )|
   \item You can't have side-effects.
   \item You can't control the order of execution (lazy evaluated languages).
   \end{itemize}
@@ -578,7 +579,6 @@ fromList [(ABSA,R123100.23),(FNB,R8719709.44)]
   \begin{itemize}[<+->]
   \item Steep learning curve.
   \item There are some very cryptic concepts.
-  \item Tools/IDE's are not as advanced as the mainstream equivalents.
   \item Order of execution may be difficult to reason about in a lazy language.
   \end{itemize}
 
@@ -604,6 +604,7 @@ fromList [(ABSA,R123100.23),(FNB,R8719709.44)]
 \begin{frame}{Companies In South Africa}
 
   \begin{description}[<+->]
+  \item[Jemstep, Sandton] Using Scala for Fund Analysis
   \item[Pattern Matched Technologies, Midrand] Using Erlang for all systems,
     eg. processing high volumes of financial transactions.
   \item[Eldo Energy, Johannesburg] Using Clojure for automated meter
@@ -615,7 +616,7 @@ fromList [(ABSA,R123100.23),(FNB,R8719709.44)]
     management.
   \item[Mira Networks, Somerset West] Using Erlang for billing
     administration and mobile development.
-  \item[Amazon.com, Cape Town] Using Scala in EC2.
+  \item[Kotive] Using Scala for designing workflow processes.
   \end{description}
 
 \end{frame}
