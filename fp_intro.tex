@@ -534,8 +534,9 @@ fromList [(ABSA,R123100.23),(FNB,R8719709.44)]
   \item Your variables can change out underneath you!
   \item You have to write your own loops for the most basic list operations!
   \item Your data structures are mutable!
-  \item You have to defensively make copies of data to prevent bugs!
   \item You have to use locks to be thread-safe!
+  \item You have to defensively make copies of data to prevent bugs!
+  \item You have to defensively check for null values!
   \item Code is generally riddled with side-effects!
   \end{itemize}
 \end{frame}
@@ -563,10 +564,11 @@ fromList [(ABSA,R123100.23),(FNB,R8719709.44)]
 
   \begin{itemize}[<+->]
   \item Changes the way you think about programming and problem solving.
-  \item Improvements on the types of abstractions we can do with eg.
-    higher-order functions.
+  \item Improves the level of code re-use we can get.
+  \item Improves the level of patterns and abstractions we can achieve, eg.
+    with higher-order functions, function composition, type classes.
   \item Lock-free concurrency.
-  \item Improved ways of testing - QuickCheck.
+  \item Raises the bar on automated testing - QuickCheck.
   \item More effective reasoning about code.
   \item Declare possible Null values explicitly if you need them.
     Goodbye NullPointerException (mostly).
