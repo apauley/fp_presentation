@@ -77,27 +77,6 @@ middle, xlabel={$x$}, ylabel={$y$}}}
   \includegraphics[scale=0.4]{img/quake.png}
 \end{frame}
 
-
-\begin{frame}{A Few Functional Programming Languages}
-
-  \begin{description}[<+->]
-  \item [Haskell] Strong focus on functional purity. Lazy evaluation.
-    Advanced static type system. Native-code compiler.
-  \item [Erlang] Focused around concurrency and distributed
-    programming. Strict evaluation. Dynamic typing. Runs on the BEAM VM.
-  \item [Clojure] A modern Lisp language. Focus on concurrency. Lazy
-    evaluation. Dynamic typing. Runs on the JVM.
-  \item [Scala] FP and OO. Strict evaluation by default,
-    but supports lazy evaluation. Advanced static type system. Runs on the JVM.
-  \item [OCaml] FP and OO. Part of the ML family. Strict evaluation.
-    Advanced static type system. Native-code compiler.
-  \item [F\#] FP and OO. Based on OCaml. Strict evaluation by default,
-    but supports lazy evaluation. Advanced static type system. Runs on
-    the .NET CLR.
-  \end{description}
-
-\end{frame}
-
 \section{Definition}
 
 \begin{frame}{}
@@ -117,14 +96,16 @@ middle, xlabel={$x$}, ylabel={$y$}}}
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}[fragile]
+\begin{frame}
+
+In functional programming:
+
   \begin{itemize}[<+->]
   \item You can't vary your variables.
-  \item You can't mutate or change your state.
   \item No while/for loops, sorry.
     \mint{java}|for ( int i=1; i <= 3 ; i++ )|
-  \item You can't have side-effects.
-  \item You can't control the order of execution (lazy evaluated languages).
+  \item You can't have mutable data structures.
+  \item You can't have any side-effects.
   \end{itemize}
 \end{frame}
 
@@ -541,6 +522,27 @@ fromList [(ABSA,R123100.23),(FNB,R8719709.44)]
 
   \inputminted[firstline=57,lastline=71]{haskell}{code/haskell/accounts.hs}
 
+\end{frame}
+
+\section{Comparison}
+
+\begin{frame}
+
+  In imperative programming:
+
+  \begin{itemize}[<+->]
+  \item Your variables can change out underneath you!
+  \item You have to write your own loops for the most basic list operations!
+  \item Your data structures are mutable!
+  \item You have to defensively make copies of data to prevent bugs!
+  \item You have to use locks to be thread-safe!
+  \item Code is generally riddled with side-effects!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Are you kidding me?}
+  How can anyone program like this???
+  \includegraphics[scale=0.3]{img/sadbaby.png}
 \end{frame}
 
 \section{Advantages}
