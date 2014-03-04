@@ -290,12 +290,12 @@ $ ./justfunctions Hello from Haskell
 
 \begin{frame}[fragile]{Recursive function: Haskell}
 
-  \inputminted[lastline=3]{haskell}{code/haskell/doubleall_recursion.hs}
+  \inputminted[fontsize=\Large,lastline=3]{haskell}{code/haskell/doubleall_recursion.hs}
 
   \vskip5mm
 
 Example use in the interactive interpreter:
-  \begin{minted}{haskell}
+  \begin{minted}[fontsize=\Large]{haskell}
 Prelude Main> doubleAll [8,2,3]
 [16,4,6]
   \end{minted}
@@ -304,22 +304,16 @@ Prelude Main> doubleAll [8,2,3]
 
 \begin{frame}[fragile]{Recursive function: Python}
 
-  \inputminted[firstline=3,lastline=9]{python}{code/python/doubleall_recursion.py}
+  \inputminted[fontsize=\large,firstline=3,lastline=9]{python}{code/python/doubleall_recursion.py}
 
   \vskip5mm
 
 Example use in the interactive interpreter:
 
-  \begin{minted}{python}
+  \begin{minted}[fontsize=\large]{python}
 >>> doubleAll([8,2,3])
 [16, 4, 6]
   \end{minted}
-
-\end{frame}
-
-\begin{frame}{An iterative version in Python}
-
-  \inputminted[firstline=3]{python}{code/python/doubleall_iterative.py}
 
 \end{frame}
 
@@ -327,7 +321,7 @@ Example use in the interactive interpreter:
 
 \begin{frame}{Pattern Matching: Haskell}
 
-  \inputminted[lastline=3]{haskell}{code/haskell/doubleall_recursion.hs}
+  \inputminted[fontsize=\Large,lastline=3]{haskell}{code/haskell/doubleall_recursion.hs}
 
 \end{frame}
 
@@ -412,11 +406,11 @@ Example use in the interactive interpreter:
 
 \begin{frame}[fragile]{Map}
 
-The builtin Haskell map function:
+The built-in Haskell map function:
 
-  \begin{minted}{haskell}
+\begin{minted}[fontsize=\huge]{haskell}
 map :: (a -> b) -> [a] -> [b]
-map _ [] = []
+map _ []     = []
 map f (x:xs) = f x : map f xs
   \end{minted}
 
@@ -425,9 +419,9 @@ map f (x:xs) = f x : map f xs
 \begin{frame}[fragile]{Map}
 
 The builtin Haskell map function:
-  \begin{minted}{haskell}
+\begin{minted}[fontsize=\Large]{haskell}
 map :: (a -> b) -> [a] -> [b]
-map _ [] = []
+map _ []     = []
 map f (x:xs) = f x : map f xs
   \end{minted}
 
@@ -435,7 +429,7 @@ map f (x:xs) = f x : map f xs
 
 Hmmm, looks very similar to our previous doubleAll function:
 
-  \inputminted[lastline=3]{haskell}{code/haskell/doubleall_recursion.hs}
+\inputminted[fontsize=\Large,lastline=3]{haskell}{code/haskell/doubleall_recursion.hs}
 \end{frame}
 
 \begin{frame}[fragile]{Map}
@@ -445,22 +439,24 @@ So our doubleAll can actually be simplified.
   \vskip5mm
 
 In Haskell:
-  \begin{minted}{haskell}
+\begin{minted}[fontsize=\Large]{haskell}
 doubleAll = map (*2)
   \end{minted}
 
   \vskip5mm
 
 In Python:
-  \inputminted[firstline=3,lastline=4]{python}{code/python/doubleall_map.py}
+\inputminted[fontsize=\Large,firstline=3,lastline=4]{python}{code/python/doubleall_map.py}
 \end{frame}
 
 \begin{frame}[fragile]{Map}
 
-  \begin{minted}{haskell}
+  \begin{minted}[fontsize=\Large]{haskell}
 doubleAll :: Num a => [a] -> [a]
 doubleAll = map (*2)
   \end{minted}
+
+  \vskip5mm
 
   \begin{tikzpicture}[
       bluesquare/.style={rectangle,  draw=blue!60, fill=blue!5, very
@@ -494,21 +490,21 @@ doubleAll = map (*2)
 
 \begin{frame}{Account Data}
 
-  \inputminted[firstline=3,lastline=3]{haskell}{code/haskell/accounts.hs}
-  \inputminted[firstline=19,lastline=22]{haskell}{code/haskell/accounts.hs}
+  \inputminted[fontsize=\large,firstline=3,lastline=3]{haskell}{code/haskell/accounts.hs}
+  \inputminted[fontsize=\large,firstline=19,lastline=22]{haskell}{code/haskell/accounts.hs}
 
 \end{frame}
 
 \begin{frame}{Account Data}
 
-  \inputminted[firstline=28,lastline=43,gobble=11]{haskell}{code/haskell/accounts.hs}
+  \inputminted[fontsize=\small,firstline=28,lastline=43,gobble=11]{haskell}{code/haskell/accounts.hs}
 
 \end{frame}
 
 \begin{frame}{Map}
 
   Map on account data:
-  \inputminted[firstline=45,lastline=46]{haskell}{code/haskell/accounts.hs}
+  \inputminted[fontsize=\Large,firstline=45,lastline=46]{haskell}{code/haskell/accounts.hs}
 
   \vskip5mm
 
@@ -549,14 +545,14 @@ doubleAll = map (*2)
 \begin{frame}[fragile]{Filter}
 
 Filter type signature:
-  \begin{minted}{haskell}
+\begin{minted}[fontsize=\Large]{haskell}
 filter :: (a -> Bool) -> [a] -> [a]
   \end{minted}
 
   \vskip5mm
 
 Filter on account data:
-  \inputminted[firstline=48,lastline=52]{haskell}{code/haskell/accounts.hs}
+\inputminted[fontsize=\large,firstline=48,lastline=52]{haskell}{code/haskell/accounts.hs}
 
   \vskip5mm
 
@@ -573,16 +569,16 @@ Output:
 \begin{frame}[fragile]{Fold}
 
 Fold type signature:
-  \begin{minted}{haskell}
+\begin{minted}[fontsize=\Large]{haskell}
 foldl :: (a -> b -> a) -> a -> [b] -> a
-  \end{minted}
+\end{minted}
 
   \vskip5mm
 
 Fold on account data:
-  \inputminted[firstline=54,lastline=55]{haskell}{code/haskell/accounts.hs}
+\inputminted[fontsize=\large,firstline=54,lastline=55]{haskell}{code/haskell/accounts.hs}
 
-  \vskip5mm
+\vskip5mm
 
 Output:
   \begin{verbatim}
@@ -594,7 +590,7 @@ R8842809.67
 
 \begin{frame}[fragile]{Fold}
 
-  \inputminted[firstline=54,lastline=59]{haskell}{code/haskell/accounts.hs}
+  \inputminted[fontsize=\large,firstline=54,lastline=59]{haskell}{code/haskell/accounts.hs}
 
 Output:
   \begin{verbatim}
@@ -606,7 +602,7 @@ fromList [(ABSA,R123100.23),(FNB,R8719709.44)]
 
 \begin{frame}{Fold}
 
-  \inputminted[firstline=57,lastline=71]{haskell}{code/haskell/accounts.hs}
+  \inputminted[fontsize=\small,firstline=57,lastline=71]{haskell}{code/haskell/accounts.hs}
 
 \end{frame}
 
