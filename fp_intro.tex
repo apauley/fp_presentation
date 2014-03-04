@@ -544,6 +544,49 @@ doubleAll = map (*2)
 
 \begin{frame}[fragile]{Filter}
 
+  Filter type signature:
+  \begin{minted}[fontsize=\Large]{haskell}
+    filter :: (a -> Bool) -> [a] -> [a]
+  \end{minted}
+
+  \vskip5mm
+
+  \begin{tikzpicture}[
+      bluesquare/.style={rectangle,  draw=blue!60, fill=blue!5, very
+        thick, minimum size=1cm}]
+
+    \node[bluesquare] (a1) at (0,3) {$acc_1$};
+    \node[bluesquare] (a2) at (1,3) {$acc_2$};
+    \node[bluesquare] (a3) at (2,3) {$acc_3$};
+    \node[bluesquare] (a4) at (3,3) {$acc_4$};
+    \node[bluesquare] (a5) at (4,3) {$acc_5$};
+
+    \node[bluesquare] (b1) at (1,0) {$acc_1$};
+    \node[bluesquare] (b2) at (2,0) {$acc_3$};
+    \node[bluesquare] (b3) at (3,0) {$acc_5$};
+
+    \node (fa1) at (0,1.5) {$in?$};
+    \node (fa2) at (1,1.5) {$in?$};
+    \node (fa3) at (2,1.5) {$in?$};
+    \node (fa4) at (3,1.5) {$in?$};
+    \node (fa5) at (4,1.5) {$in?$};
+
+    \draw (a1) -- (fa1);
+    \draw (a2) -- (fa2);
+    \draw (a3) -- (fa3);
+    \draw (a4) -- (fa4);
+    \draw (a5) -- (fa5);
+
+    \draw[->] (fa1) -- (b1);
+    \draw[->] (fa3) -- (b2);
+    \draw[->] (fa5) -- (b3);
+
+  \end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}[fragile]{Filter}
+
 Filter type signature:
 \begin{minted}[fontsize=\Large]{haskell}
 filter :: (a -> Bool) -> [a] -> [a]
@@ -564,7 +607,6 @@ Output:
   \end{verbatim}
 
 \end{frame}
-
 
 \begin{frame}[fragile]{Fold}
 
