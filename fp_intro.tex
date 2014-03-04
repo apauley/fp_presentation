@@ -505,32 +505,44 @@ doubleAll = map (*2)
 
 \end{frame}
 
-\begin{frame}[fragile]{Map}
+\begin{frame}{Map}
 
-Map type signature:
-  \begin{minted}{haskell}
-map :: (a -> b) -> [a] -> [b]
-  \end{minted}
-
-  \vskip5mm
-
-Map on account data:
+  Map on account data:
   \inputminted[firstline=45,lastline=46]{haskell}{code/haskell/accounts.hs}
 
   \vskip5mm
 
-balance type signature:
-  \begin{minted}{haskell}
-balance :: Account -> Amount
-  \end{minted}
+  \begin{tikzpicture}[
+      bluesquare/.style={rectangle,  draw=blue!60, fill=blue!5, very
+        thick, minimum size=1cm},
+      greensquare/.style={rectangle, draw=green!60, fill=green!5, very thick, minimum size=1cm}]
 
-  \vskip5mm
+    \node[bluesquare] (a1) at (0,3) {$acc_1$};
+    \node[bluesquare] (a2) at (1,3) {$acc_2$};
+    \node[bluesquare] (a3) at (2,3) {$acc_3$};
+    \node[bluesquare] (a4) at (3,3) {$acc_4$};
+    \node[bluesquare] (a5) at (4,3) {$acc_5$};
 
-Output:
-  \begin{verbatim}
-*Main> balances accounts
-[R123000.23,R5782347.99,R100.0,R2937361.45]
-  \end{verbatim}
+    \node[greensquare] (b1) at (0,0) {$bal_1$};
+    \node[greensquare] (b2) at (1,0) {$bal_2$};
+    \node[greensquare] (b3) at (2,0) {$bal_3$};
+    \node[greensquare] (b4) at (3,0) {$bal_4$};
+    \node[greensquare] (b5) at (4,0) {$bal_5$};
+
+    \node (fa1) at (0,1.5) {$balance(acc_1)$};
+    \node (fa5) at (4,1.5) {$balance(acc_5)$};
+
+    \draw     (a1)  -- (fa1);
+    \draw[->] (fa1) -- (b1);
+
+    \draw[->] (a2) -- (b2);
+    \draw[->] (a3) -- (b3);
+    \draw[->] (a4) -- (b4);
+
+    \draw     (a5)  -- (fa5);
+    \draw[->] (fa5) -- (b5);
+
+  \end{tikzpicture}
 
 \end{frame}
 
