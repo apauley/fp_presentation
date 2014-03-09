@@ -772,31 +772,45 @@ foldl (+) 0 (balances accounts)
       \end{tikzpicture}
 \end{frame}
 
-\begin{frame}[fragile]{Fold}
+\begin{frame}[fragile]{balancesPerBank}
+      \begin{minted}[fontsize=\Large]{haskell}
+foldl insertBalance Map.empty accounts
+      \end{minted}
 
-Fold type signature:
-\begin{minted}[fontsize=\Large]{haskell}
-foldl :: (a -> b -> a) -> a -> [b] -> a
-\end{minted}
+      \begin{tikzpicture}[
+          bluesquare/.style={rectangle,  draw=blue!60, fill=blue!5, very
+            thick, minimum size=1cm},
+          greensquare/.style={rectangle, draw=green!60, fill=green!5, very thick, minimum size=1cm}]
 
-  \vskip5mm
+        \node[greensquare] (acc0) at (0,8) {\{\}};
+        \node[bluesquare]  (a1)   at (2,8) {$acc_1$};
+        \node[bluesquare]         at (3,8) {$acc_2$};
+        \node[bluesquare]         at (4,8) {$acc_3$};
 
-Fold on account data:
-\inputminted[fontsize=\large,firstline=54,lastline=55]{haskell}{code/haskell/accounts.hs}
+        \node[greensquare] (acc1) at (1,6.25) {$map$};
+        \node[bluesquare]  (a2)   at (3,6.25) {$acc_2$};
+        \node[bluesquare]         at (4,6.25) {$acc_3$};
 
-\vskip5mm
+        \draw[->] (acc0) -- (acc1);
+        \draw[->] (a1)   -- (acc1);
 
-Output:
-  \begin{verbatim}
-*Main> balanceSum accounts
-R8842809.67
-  \end{verbatim}
+        \node[greensquare] (acc2) at (2,4.5) {$map$};
+        \node[bluesquare]  (a3)   at (4,4.5) {$acc_3$};
 
+        \draw[->] (acc1) -- (acc2);
+        \draw[->] (a2)   -- (acc2);
+
+        \node[greensquare] (acc3) at (3,2.75) {$map$};
+
+        \draw[->] (acc2) -- (acc3);
+        \draw[->] (a3)   -- (acc3);
+
+      \end{tikzpicture}
 \end{frame}
 
 \begin{frame}[fragile]{Fold}
 
-  \inputminted[fontsize=\large,firstline=54,lastline=59]{haskell}{code/haskell/accounts.hs}
+  \inputminted[fontsize=\large,firstline=57,lastline=59]{haskell}{code/haskell/accounts.hs}
 
 Output:
   \begin{verbatim}
