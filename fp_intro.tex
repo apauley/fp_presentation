@@ -144,8 +144,7 @@ Python
        \end{minted}
      \end{column}
 
-     \begin{column}[T]{5cm} % alternative top-align that's better for
-                            % graphics
+     \begin{column}[T]{5cm}
 Haskell
        \begin{minted}{haskell}
 Prelude> let list1 = [1,2,3]
@@ -261,22 +260,25 @@ $f(2) = 8 - 4 + 3 = 7$
   {\large Constant values are just functions with no input parameters}
 
   \vskip5mm
-
   {\Huge $x = 42$}
+  \vskip10mm
 
-  \vskip5mm
-
-Python function definition:
-  \begin{minted}{python}
+  \begin{columns}[t]
+    \begin{column}[T]{5cm}
+      Python function definition:
+      \begin{minted}[fontsize=\Large]{python}
 def x():
     return 42
-  \end{minted}
+      \end{minted}
+    \end{column}
 
-Haskell function definition:
-  \begin{minted}{haskell}
+    \begin{column}[T]{5cm}
+       Haskell function definition:
+       \begin{minted}[fontsize=\Large]{haskell}
 x = 42
-  \end{minted}
-
+       \end{minted}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{Functions can be composed}
