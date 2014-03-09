@@ -636,14 +636,7 @@ doubleAll = map (*2)
 
 \end{frame}
 
-\begin{frame}[fragile]{Filter}
-
-  Filter type signature:
-  \begin{minted}[fontsize=\Large]{haskell}
-    filter :: (a -> Bool) -> [a] -> [a]
-  \end{minted}
-
-  \vskip5mm
+\begin{frame}{Filter}
 
   \begin{tikzpicture}[
       bluesquare/.style={rectangle,  draw=blue!60, fill=blue!5, very
@@ -681,13 +674,6 @@ doubleAll = map (*2)
 
 \begin{frame}[fragile]{Filter}
 
-Filter type signature:
-\begin{minted}[fontsize=\Large]{haskell}
-filter :: (a -> Bool) -> [a] -> [a]
-  \end{minted}
-
-  \vskip5mm
-
 Filter on account data:
 \inputminted[fontsize=\large,firstline=48,lastline=52]{haskell}{code/haskell/accounts.hs}
 
@@ -695,7 +681,7 @@ Filter on account data:
 
 Output:
   \begin{verbatim}
-*Main> loaded accounts
+*Main> topAccounts accounts
 [FNB 6868773585 (J. Black) R5782347.99,
  FNB 6584539813 (S. Jones) R2937361.45]
   \end{verbatim}

@@ -43,13 +43,13 @@ accounts = [Account {accNum="4076814233",
                      bank=FNB}]
 
 balances :: [Account] -> [Amount]
-balances = map balance
+balances accounts = map balance accounts
 
-loaded :: [Account] -> [Account]
-loaded = filter isLoaded
+topAccounts :: [Account] -> [Account]
+topAccounts accounts = filter isRich accounts
 
-isLoaded :: Account -> Bool
-isLoaded account = balance account >= (Amount 1000000)
+isRich :: Account -> Bool
+isRich acc = balance acc >= (Amount 1000000)
 
 balanceSum :: [Account] -> Amount
 balanceSum accounts = foldl (+) 0 (balances accounts)
@@ -73,6 +73,6 @@ addBalance bankmap account =
 main :: IO ()
 main = do
     putStrLn $ "Account balances:\n" ++ show (balances accounts) ++ "\n"
-    putStrLn $ "Accounts that are loaded:\n" ++ show (loaded accounts) ++ "\n"
+    putStrLn $ "High net-worth accounts:\n" ++ show (topAccounts accounts) ++ "\n"
     putStrLn $ "Sum of balances:\n" ++ show (balanceSum accounts) ++ "\n"
     putStrLn $ "Map of balances per bank:\n" ++ show (balancesPerBank accounts)
