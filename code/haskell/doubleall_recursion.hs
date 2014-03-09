@@ -1,4 +1,4 @@
-doubleAll :: Num a => [a] -> [a]
+doubleAll :: [Int] -> [Int]
 doubleAll []     = []
 doubleAll (x:xs) = x*2 : doubleAll xs
 
