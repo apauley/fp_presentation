@@ -16,10 +16,10 @@ instance Num Amount where
          fromInteger i = Amount (fromInteger i)
          signum (Amount a) = Amount (signum a)
 
-data Account = Account {bank    :: Bank
-                       ,accNum  :: String
-                       ,owner   :: String
-                       ,balance :: Amount}
+data Account = Account {bank    :: Bank,
+                        accNum  :: String,
+                        owner   :: String,
+                        balance :: Amount}
 
 instance Show Account where
          show (Account bank accNum owner balance) = 
