@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[mathserif]{beamer}
 
 \usetheme{Singapore}
 %%\usetheme{Berkeley}
@@ -13,8 +13,9 @@
 \date{March 11, 2014}
 
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
 
+\usepackage{amsmath}
+\usepackage{graphicx}
 \usepackage{pgfplots}
 
 \pgfplotsset{mypgfstyle/.append style={axis x line=middle, axis y line=
@@ -109,17 +110,61 @@ middle, xlabel={$x$}, ylabel={$y$}}}
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}
 
-In functional programming:
+\begin{frame}{You can't vary your variables}
+  \begin{align*}
+      x     & = x + 1\\
+      x - x & = 1\\
+      0     & = 1
+  \end{align*}
+\end{frame}
 
-  \begin{itemize}[<+->]
-  \item You can't vary your variables.
-  \item No while/for loops, sorry.
-    \mint{java}|for ( int i=1; i <= 3 ; i++ )|
-  \item You can't have mutable data structures.
-  \item You can't have any side-effects.
-  \end{itemize}
+\begin{frame}[fragile]{No while/for loops. Sorry :-(}
+  \begin{minted}{java}
+for (int i=1; i <= 3 ; i++) {
+  System.out.println("I am varying a variable!");
+}
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{You can't have mutable data structures}
+     \begin{columns}[t] % contents are top vertically aligned
+     \begin{column}[T]{5cm} % each column can also be its own
+                            % environment
+Python
+       \begin{minted}{python}
+>>> list1 = [1,2,3]
+>>> list2 = list1
+>>> list1.reverse()
+
+>>> list1
+[3, 2, 1]
+>>> list2
+[3, 2, 1]
+       \end{minted}
+     \end{column}
+
+     \begin{column}[T]{5cm} % alternative top-align that's better for
+                            % graphics
+Haskell
+       \begin{minted}{haskell}
+Prelude> let list1 = [1,2,3]
+Prelude> let list2 = list1
+Prelude> reverse(list1)
+[3,2,1]
+Prelude> list1
+[1,2,3]
+Prelude> list2
+[1,2,3]
+       \end{minted}
+     \end{column}
+     \end{columns}
+\end{frame}
+
+\begin{frame}{You can't have any side-effects}
+  \begin{center}
+    \includegraphics[scale=0.4]{img/side-effects-cartoon.jpg}
+  \end{center}
 \end{frame}
 
 \begin{frame}{Are you kidding me?}
