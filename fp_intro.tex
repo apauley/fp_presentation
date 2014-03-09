@@ -161,7 +161,7 @@ Prelude> list2
      \end{columns}
 \end{frame}
 
-\begin{frame}{You can't have any side-effects}
+\begin{frame}{You can't have any side effects}
   \begin{center}
     \includegraphics[scale=0.4]{img/side-effects-cartoon.jpg}
   \end{center}
@@ -181,27 +181,21 @@ Prelude> list2
   \end{exampleblock}
   \vskip5mm
   \hspace*\fill{\small See Hughes and Dijkstra \cite{whyfp, dijkstra}}
-
-  \begin{itemize}[<+->]
-  \item Also framed in the negative (you can't).
-  \item In hindsight we don't really need GOTO's.
-  \item In hindsight it is not about what you cannot do.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Structured Programming and Functional Programming}
-  \begin{description}[<+->]
-  \item[Structured Programming] introduced subroutines with fixed
-    entry/exit points (instead of GOTO's), resulting in improved
-    modularity.
-  \item[Functional Programming] provides similar important benefits --
-    more about this later.
-  \end{description}
 \end{frame}
 
 \begin{frame}{}
 
-  {\Large We need a better definition for Functional Programming.}
+  \begin{center}
+    {\Huge It's not about what we cannot do.}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}{}
+
+  \begin{center}
+    {\Huge We need a better definition of Functional Programming.}
+  \end{center}
 
 \end{frame}
 
@@ -755,7 +749,7 @@ fromList [(ABSA,R123100.23),(FNB,R8719709.44)]
   \item You have to use locks to be thread-safe!
   \item You have to defensively make copies of data to prevent bugs!
   \item You have to defensively check for null values!
-  \item Code is generally riddled with side-effects!
+  \item Code is generally riddled with side effects!
   \end{itemize}
 \end{frame}
 
