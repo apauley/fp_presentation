@@ -356,7 +356,7 @@ $ ./justfunctions Hello from Haskell
 
 \end{frame}
 
-\begin{frame}{Some Haskell syntax}
+\begin{frame}{Some Haskell Syntax}
 
   Python:
   \inputminted[fontsize=\large,firstline=11,lastline=12]{python}{code/python/justfunctions.py}
@@ -378,6 +378,23 @@ $ ./justfunctions Hello from Haskell
 Example use in the interactive interpreter:
   \begin{minted}[fontsize=\Large]{haskell}
 Prelude Main> doubleAll [8,2,3]
+[16,4,6]
+  \end{minted}
+
+\end{frame}
+
+\begin{frame}[fragile]{Recursive function expanded}
+
+  \inputminted[fontsize=\Large,lastline=3]{haskell}{code/haskell/doubleall_recursion.hs}
+
+  \vskip5mm
+
+  \begin{minted}[fontsize=\Large]{haskell}
+> doubleAll [8,2,3]
+> 16 : (doubleAll [2,3])
+> 16 : 4 : (doubleAll [3])
+> 16 : 4 : 6 : (doubleAll [])
+> 16 : 4 : 6 : []
 [16,4,6]
   \end{minted}
 
