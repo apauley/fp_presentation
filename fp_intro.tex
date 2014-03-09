@@ -203,7 +203,7 @@ Prelude> list2
 
 \begin{exampleblock}{}
   {\Large ``
-  Functional programming is so called because a program consists entirely of functions.
+  Functional programming is so called because a program consists entirely of \alert{functions}.
   ''}
   \vskip5mm
   \hspace*\fill{\small--- John Hughes, Why Functional Programming
@@ -213,7 +213,7 @@ Prelude> list2
 
 \begin{frame}{}
 
-  {\Large OK... so what exactly is a function?}
+  {\Large OK... so what exactly is a \alert{function}?}
 
 \end{frame}
 
@@ -237,14 +237,15 @@ Prelude> list2
 
   \vskip5mm
 
-When we evaluate the function:
+When we evaluate the function:\\
+$f(2) = 8 - 4 + 3 = 7$
+
   \begin{itemize}[<+->]
-    \item $f(2) = 8 - 4 + 3 = 7$
     \item The value of $x$ will not change inside the function body.
-    \item No $x = 2$ and later $x = 71$ in the same function body.
-    \item Same input, same output. Every time.
-    \item In other words, we can replace any occurrence of $f(2)$ with
-      $7$ (Referential Transparency)
+    \item Same input, same output. Every time. (Referential Transparency)
+    \item We can call $f$ multiple times without any side effects (Idempotence).
+    \item We don't have to recalculate $f(2)$, we can replace any
+      occurrence of $f(2)$ with $7$ (Memoization).
   \end{itemize}
 \end{frame}
 
@@ -290,8 +291,8 @@ x = 42
 
 \begin{frame}{Higher-order Functions}
 
-  {\Large Functions can take functions as input and/or return
-    functions as the result.}
+  {\Large Functions can take functions as input.}\\
+  {\Large Functions can return functions as the result.}
 
   \vskip5mm
 
