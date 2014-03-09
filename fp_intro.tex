@@ -85,7 +85,7 @@ middle, xlabel={$x$}, ylabel={$y$}}}
 
 \begin{frame}{Quake}
   \begin{center}
-    \includegraphics[scale=0.4]{img/quake.png}
+    \includegraphics[scale=0.3]{img/quake.png}
   \end{center}
 \end{frame}
 
@@ -196,6 +196,26 @@ Prelude> list2
     {\Huge We need a better definition of Functional Programming.}
   \end{center}
 
+\end{frame}
+
+\begin{frame}{Programming Paradigms}
+  \framesubtitle{Very Simplified}
+  \begin{tikzpicture}[
+      bluecircle/.style={circle,  draw=blue!60, fill=blue!5, very thick, minimum size=5cm},
+      greencircle/.style={circle, draw=green!60, fill=green!5, very thick, minimum size=5cm}]
+
+    \node[greencircle] (imperative)  at (0,3) {};
+    \node[bluecircle]  (declarative) at (5.5,3) {};
+
+    \node (i) at (0,0) {Imperative};
+    \node (d) at (5.5,0) {Declarative};
+
+    \node (proc) at (0,3.5) {Procedural};
+    \node (oo)   at (0,2.5) {Object-Oriented};
+
+    \node (fp)    at (5.5,3.5) {\alert{Functional}};
+    \node (logic) at (5.5,2.5) {Logic};
+  \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Functional Programming, noun:}
