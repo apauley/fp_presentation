@@ -695,8 +695,8 @@ Output:
     \begin{column}[T]{5cm}
 
       \begin{minted}[fontsize=\Large]{haskell}
-        foldl (+) 0 [8,2,3]
-        13
+foldl (+) 0 [8,2,3]
+13
       \end{minted}
     \end{column}
 
@@ -734,6 +734,42 @@ Output:
     \end{column}
   \end{columns}
 
+\end{frame}
+
+\begin{frame}[fragile]{Fold/Reduce/Inject}
+      \begin{minted}[fontsize=\Large]{haskell}
+foldl (+) 0 (balances accounts)
+      \end{minted}
+
+      \begin{tikzpicture}[
+          bluesquare/.style={rectangle,  draw=blue!60, fill=blue!5, very
+            thick, minimum size=1cm},
+          greensquare/.style={rectangle, draw=green!60, fill=green!5, very thick, minimum size=1cm}]
+
+        \node[greensquare] (acc0) at (0,8) {0};
+        \node[bluesquare]  (a1)   at (2,8) {$bal_1$};
+        \node[bluesquare]         at (3,8) {$bal_2$};
+        \node[bluesquare]         at (4,8) {$bal_3$};
+
+        \node[greensquare] (acc1) at (1,6.25) {$sum$};
+        \node[bluesquare]  (a2)   at (3,6.25) {$bal_2$};
+        \node[bluesquare]         at (4,6.25) {$bal_3$};
+
+        \draw[->] (acc0) -- (acc1);
+        \draw[->] (a1)   -- (acc1);
+
+        \node[greensquare] (acc2) at (2,4.5) {$sum$};
+        \node[bluesquare]  (a3)   at (4,4.5) {$bal_3$};
+
+        \draw[->] (acc1) -- (acc2);
+        \draw[->] (a2)   -- (acc2);
+
+        \node[greensquare] (acc3) at (3,2.75) {$sum$};
+
+        \draw[->] (acc2) -- (acc3);
+        \draw[->] (a3)   -- (acc3);
+
+      \end{tikzpicture}
 \end{frame}
 
 \begin{frame}[fragile]{Fold}
