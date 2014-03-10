@@ -853,6 +853,7 @@ fromList [(ABSA,R123100.23),(FNB,R8719709.44)]
   \item You have to use locks to be thread-safe!
   \item You have to defensively make copies of data to prevent bugs!
   \item You have to defensively check for null values!
+  \item You have to think about implicit state! (this, self)
   \item Code is generally riddled with side effects!
   \end{itemize}
 \end{frame}
@@ -864,9 +865,23 @@ fromList [(ABSA,R123100.23),(FNB,R8719709.44)]
   \end{center}
 \end{frame}
 
-\section{Advantages}
+\section{A Few Challenges}
 
-\begin{frame}{Perlisism \#19}
+\begin{frame}{Less loops, more map/filter/fold}
+
+  {\Huge Join the anti-while campaign}
+
+\end{frame}
+
+\begin{frame}{Treat side effects as a first-class concern}
+
+  \begin{center}
+    \includegraphics[scale=0.4]{img/side-effects-cartoon.jpg}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}{Learn a functional language}
 
 \begin{exampleblock}{}
   {\Large ``
@@ -878,34 +893,13 @@ fromList [(ABSA,R123100.23),(FNB,R8719709.44)]
 
 \end{frame}
 
-\begin{frame}{Advantages of Functional Programming}
+\begin{frame}{Shun your objects}
 
-  \begin{itemize}[<+->]
-  \item Changes the way you think about programming and problem solving.
-  \item Improves the level of code re-use we can get.
-  \item Improves the level of patterns and abstractions we can achieve, eg.
-    with higher-order functions, function composition, type classes.
-  \item Lock-free concurrency.
-  \item Raises the bar on automated testing - QuickCheck.
-  \item More effective reasoning about code.
-  \item Declare possible Null values explicitly if you need them.
-    Goodbye NullPointerException (mostly).
-  \end{itemize}
+  {\Huge Write non-trivial code without using classes and objects.}
+  \vskip5mm
+  {\Large Get re-usability with higher-order functions.}
 
 \end{frame}
-
-\section{Disdvantages}
-
-\begin{frame}{Disadvantages of Functional Programming}
-
-  \begin{itemize}[<+->]
-  \item Steep learning curve.
-  \item There are some very cryptic concepts.
-  \item Order of execution may be difficult to reason about in a lazy language.
-  \end{itemize}
-
-\end{frame}
-
 
 \begin{frame}{Unfamiliar Territory}
 
@@ -925,7 +919,7 @@ fromList [(ABSA,R123100.23),(FNB,R8719709.44)]
 
 \begin{frame}{Companies In South Africa}
 
-  \begin{description}[<+->]
+  \begin{description}
   \item[Jemstep, Sandton] Using Scala for Fund Analysis
   \item[Allan Gray, Cape Town] Using Scala for backend logic and system integration.
   \item[Yuppiechef, Cape Town] Using Clojure for their Warehouse
@@ -940,7 +934,7 @@ fromList [(ABSA,R123100.23),(FNB,R8719709.44)]
 
 \begin{frame}{Companies In South Africa}
 
-  \begin{description}[<+->]
+  \begin{description}
   \item[Pattern Matched Technologies, Midrand] Using Erlang for all systems,
     eg. processing high volumes of financial transactions.
   \item[Effective Control Systems, Kyalami] Using Erlang for printer
