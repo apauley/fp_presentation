@@ -108,51 +108,54 @@ middle, xlabel={$x$}, ylabel={$y$}}}
 \end{frame}
 
 
-\begin{frame}{You can't vary your variables}
-  \begin{align*}
-      x     & = x + 1\\
-      x - x & = 1\\
-      0     & = 1
-  \end{align*}
+\begin{frame}[fragile]{You can't vary your variables}
+  \begin{minted}[fontsize=\Huge]{erl}
+1> X = 42.
+42
+2> X = X + 1.
+** exception error:
+   no match of right hand
+   side value 43
+  \end{minted}
 \end{frame}
 
 \begin{frame}[fragile]{No while/for loops. Sorry :-(}
-  \begin{minted}{java}
-for (int i=1; i <= 3 ; i++) {
-  System.out.println("I am varying a variable!");
+  \begin{minted}[fontsize=\Huge]{java}
+int i;
+for (i=1; i<=3; i++) {
+  System.out.println(i);
 }
   \end{minted}
 \end{frame}
 
 \begin{frame}[fragile]{You can't have mutable data structures}
-     \begin{columns}[t] % contents are top vertically aligned
-     \begin{column}[T]{5cm} % each column can also be its own
-                            % environment
+     \begin{columns}[t]
+     \begin{column}[T]{5cm}
 Python
-       \begin{minted}{python}
+\begin{minted}[fontsize=\large]{python}
 >>> list1 = [1,2,3]
 >>> list2 = list1
->>> list1.reverse()
-
+>>> print list1.reverse()
+None
 >>> list1
 [3, 2, 1]
 >>> list2
 [3, 2, 1]
-       \end{minted}
+\end{minted}
      \end{column}
 
      \begin{column}[T]{5cm}
 Haskell
-       \begin{minted}{haskell}
-Prelude> let list1 = [1,2,3]
-Prelude> let list2 = list1
-Prelude> reverse(list1)
+\begin{minted}[fontsize=\large]{haskell}
+> let list1 = [1,2,3]
+> let list2 = list1
+> reverse(list1)
 [3,2,1]
-Prelude> list1
+> list1
 [1,2,3]
-Prelude> list2
+> list2
 [1,2,3]
-       \end{minted}
+\end{minted}
      \end{column}
      \end{columns}
 \end{frame}
@@ -259,6 +262,17 @@ $f(2) = 8 - 4 + 3 = 7$
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Varying variables does not make sense}
+
+  {\Huge
+    \begin{align*}
+      x     & = x + 1\\
+      x - x & = 1\\
+      0     & = 1
+    \end{align*}
+  }
+
+\end{frame}
 
 \begin{frame}{Functions can call other functions}
 
