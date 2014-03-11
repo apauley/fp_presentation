@@ -70,9 +70,20 @@ addBalance bankmap account =
                 Nothing  -> balance account
                 Just bal -> (balance account) + bal
 
+(|>) :: (a -> b) -> (b -> c) -> a -> c
+(|>) f1 f2 = f2 . f1
+
+s2 :: [Account] -> Amount
+s2 = balances |> (foldl(+)0)
+
+s3 :: [Account] -> Amount
+s3 = (foldl(+)0) . balances
+
 main :: IO ()
 main = do
     putStrLn $ "Account balances:\n" ++ show (balances accounts) ++ "\n"
     putStrLn $ "High net-worth accounts:\n" ++ show (topAccounts accounts) ++ "\n"
     putStrLn $ "Sum of balances:\n" ++ show (balanceSum accounts) ++ "\n"
+    putStrLn $ "Sum of balances:\n" ++ show (s2 accounts) ++ "\n"
+    putStrLn $ "Sum of balances:\n" ++ show (s3 accounts) ++ "\n"
     putStrLn $ "Map of balances per bank:\n" ++ show (balancesPerBank accounts)
