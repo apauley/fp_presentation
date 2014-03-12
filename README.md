@@ -1,9 +1,9 @@
-An Introduction to Functional Programming.
+# An Introduction to Functional Programming.
 
-The version presented at the University of Pretoria to the COS-301 students can be found here:
-https://www.dropbox.com/s/ot41s13dzacgayd/fp_intro2013-09-02.pdf
+A presentation in LaTeX beamer.
+You need pdflatex to generate the pdf.
 
-A presentation in LaTeX beamer. You need pdflatex to generate the pdf.
+## Generating the PDF
 
 If you have rake installed you can generate the pdf by typing "rake" in the top-level directory of this repo.
 
@@ -17,3 +17,21 @@ $ sudo tlmgr install pgfplots
 ```
 
 http://tug.org/mactex/morepackages.html
+
+## Previous Presentations
+
+### DeveloperUG - Microsoft Campus in Bryanston, Johannesburg - March 11, 2014
+
+  http://www.slideshare.net/AndreasPauley/an-introduction-to-functional-programming-developerug-20140311
+
+  http://www.meetup.com/DeveloperUG/events/139983502/
+
+### Joburg Centre for Software Engineering - Braamfontein, Johannesburg - February 17, 2014
+
+  http://www.jcse.org.za/events/introduction-functional-programming-andreas-pauley
+
+### COS301 Students - University of Pretoria - September 2, 2013
+
+  https://www.dropbox.com/s/ot41s13dzacgayd/fp_intro2013-09-02.pdf
+
+  http://www.slideshare.net/AndreasPauley/fp-intro2013-0902
