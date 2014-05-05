@@ -64,8 +64,28 @@ middle, xlabel={$x$}, ylabel={$y$}}}
 
 \begin{frame}{A simple programming example}
 
-  Say I give you an array of integers, and I want every one of them doubled, how would you write it?
+  {\Large Say I give you an array of integers,
+    and I want every one of them doubled.
 
+    \vskip5mm
+
+    How would you write it?}
+
+\end{frame}
+
+\begin{frame}[fragile]{A simple programming example}
+
+  {\Large I have this:}
+  \begin{minted}[fontsize=\Huge]{python}
+    [1,3,6]
+  \end{minted}
+
+  \vskip5mm
+
+  {\Large I want this:}
+  \begin{minted}[fontsize=\Huge]{python}
+    [2,6,12]
+  \end{minted}
 \end{frame}
 
 \begin{frame}{A simple programming example}
@@ -76,27 +96,37 @@ middle, xlabel={$x$}, ylabel={$y$}}}
 
 \begin{frame}{A simple programming example}
 
-  Sorry, I forgot to mention that you cannot mutate any collection.
+  {\Large Sorry, I forgot to mention that you cannot do in-place mutation on the list of numbers I give you.
 
-  Please try again.
+    \vskip5mm
+
+  Please try again.}
 
 \end{frame}
 
 \begin{frame}{A simple programming example}
 
+  Our first try had a void return type:
   \inputminted[firstline=3,lastline=7,gobble=4]{java}{code/java/DoubleAllMutation.java}
 
   \vskip5mm
 
+  Now we have to return a result:
   \inputminted[firstline=3,lastline=9,gobble=4]{java}{code/java/DoubleAllIterative.java}
 
 \end{frame}
 
 \begin{frame}{A simple programming example}
 
-  Looking much better, but you also can't vary any of your variables.
+  {\Large Looking much better, but you can't mutate \alert{any} collection, appending to the new array won't work.}
 
-  Please try again.
+  \vskip5mm
+
+  {\Large Also, you can't vary your variables (i++).}
+
+  \vskip5mm
+
+  {\Large Please try again.}
 
 \end{frame}
 
@@ -781,7 +811,7 @@ foldl (+) 0 [8,2,3]
 \end{frame}
 
 \begin{frame}[fragile]{Fold/Reduce/Inject}
-  
+
   \inputminted[fontsize=\large,firstline=54,lastline=55]{haskell}{code/haskell/accounts.hs}
 
   \begin{columns}[t]
@@ -819,12 +849,12 @@ foldl (+) 0 [8,2,3]
       \end{tikzpicture}
     \end{column}
     \begin{column}[T]{5cm}
-    \end{column}      
-  \end{columns}      
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}[fragile]{Function Composition}
-  
+
   \inputminted[fontsize=\large,firstline=54,lastline=55]{haskell}{code/haskell/accounts.hs}
 
   \begin{columns}[t]
@@ -864,11 +894,11 @@ foldl (+) 0 [8,2,3]
     \begin{column}[T]{5cm}
 
       \vskip5mm
-            
+
       \inputminted[firstline=76,lastline=77]{haskell}{code/haskell/accounts.hs}
 
       \vskip5mm
-      
+
       $h(x) = (f \circ g)(x) = f(g(x))$
       \vskip2mm
       $h = f \circ g$
@@ -879,8 +909,8 @@ foldl (+) 0 [8,2,3]
 
       \inputminted[firstline=79,lastline=80]{haskell}{code/haskell/accounts.hs}
 
-    \end{column}      
-  \end{columns}      
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}[fragile]{balancesPerBank}
