@@ -596,51 +596,6 @@ Example use in the interactive interpreter:
 
 \begin{frame}[fragile]{Map}
 
-The built-in Haskell map function:
-
-\begin{minted}[fontsize=\huge]{haskell}
-map :: (a -> b) -> [a] -> [b]
-map _ []     = []
-map f (x:xs) = f x : map f xs
-  \end{minted}
-
-\end{frame}
-
-\begin{frame}[fragile]{Map}
-
-The builtin Haskell map function:
-\begin{minted}[fontsize=\Large]{haskell}
-map :: (a -> b) -> [a] -> [b]
-map _ []     = []
-map f (x:xs) = f x : map f xs
-  \end{minted}
-
-  \vskip5mm
-
-Hmmm, looks very similar to our previous doubleAll function:
-
-\inputminted[fontsize=\Large,lastline=3]{haskell}{code/haskell/doubleall_recursion.hs}
-\end{frame}
-
-\begin{frame}[fragile]{Map}
-
-So our doubleAll can actually be simplified.
-
-  \vskip5mm
-
-In Haskell:
-\begin{minted}[fontsize=\Large]{haskell}
-doubleAll = map (*2)
-  \end{minted}
-
-  \vskip5mm
-
-In Python:
-\inputminted[fontsize=\Large,firstline=3,lastline=4]{python}{code/python/doubleall_map.py}
-\end{frame}
-
-\begin{frame}[fragile]{Map}
-
   \begin{minted}[fontsize=\Large]{haskell}
 doubleAll :: Num a => [a] -> [a]
 doubleAll = map (*2)
