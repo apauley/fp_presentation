@@ -68,29 +68,76 @@ middle, xlabel={$x$}, ylabel={$y$}}}
   \end{center}
 \end{frame}
 
-\begin{frame}
-  \begin{center}
-    \includegraphics[scale=0.8]{img/WhoLikesFP.png}
-  \end{center}
+\begin{frame}{Who likes FP?}
+  \begin{columns}[t]
+    \begin{column}[T]{2cm}
+      \includegraphics[scale=0.2]{img/dave_thomas.jpg}
+    \end{column}
+
+    \begin{column}[T]{8cm}
+      {\large ``
+        And that’s why I think functional programming is a natural successor to object-oriented programming.
+        ''}
+      \vskip5mm
+      \hspace*\fill{\small--- Dave Thomas, Pragmatic Programmers \cite{pragdave}}
+    \end{column}
+  \end{columns}
+
+  \vskip5mm
+
+  \begin{columns}[t]
+    \begin{column}[T]{8cm}
+      {\large ``
+        Without understanding functional programming, you can't invent MapReduce
+        ''}
+      \vskip5mm
+      \hspace*\fill{\small--- Joel Spolsky \cite{spolsky}}
+    \end{column}
+
+    \begin{column}[T]{2cm}
+      \includegraphics[scale=0.2]{img/spolsky.jpg}
+    \end{column}
+
+  \end{columns}
+
+  \vskip5mm
+
+  \begin{columns}[t]
+    \begin{column}[T]{2cm}
+      \includegraphics[scale=0.2]{img/uncle_bob_martin.jpg}
+    \end{column}
+
+    \begin{column}[T]{8cm}
+      {\large ``
+        ...it’s almost certainly true that functional programming is the next big thing.
+        ''}
+      \vskip5mm
+      \hspace*\fill{\small--- Uncle Bob Martin \cite{unclebob}}
+    \end{column}
+  \end{columns}
+
 \end{frame}
 
 \begin{frame}
-  \begin{exampleblock}{}
-    {\Large ``
-      No matter what language you work in, programming
-      in a functional style provides benefits.
-      You should do it whenever it is convenient, and you
-      should think hard about the decision when it isn’t convenient.
-      ''}
-    \vskip5mm
-    \hspace*\fill{\small--- John Carmack, ID Software \cite{carmack}}
-  \end{exampleblock}
-\end{frame}
 
-\begin{frame}{Quake}
-  \begin{center}
-    \includegraphics[scale=0.3]{img/quake.png}
-  \end{center}
+  \begin{columns}[t]
+    \begin{column}[T]{2cm}
+      \includegraphics[scale=0.2]{img/john_carmack.jpg}
+    \end{column}
+
+    \begin{column}[T]{8cm}
+      \begin{exampleblock}{}
+        {\Large ``
+          No matter what language you work in, programming
+          in a functional style provides benefits.
+          You should do it whenever it is convenient, and you
+          should think hard about the decision when it isn’t convenient.
+          ''}
+        \vskip5mm
+        \hspace*\fill{\small--- John Carmack, ID Software \cite{carmack}}
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -1154,6 +1201,18 @@ fromList [(ABSA,R123100.23),(FNB,R8719709.44)]
       John Hughes
       \newblock Why Functional Programming Matters
       \newblock \url{http://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf}
+    \bibitem{pragdave}
+      Dave Thomas
+      \newblock Programming Elixir, A Gentle Introduction
+      \newblock \url{http://theprosegarden.com/part-1-of/}
+    \bibitem{spolsky}
+      Joel Spolsky
+      \newblock Can Your Programming Language Do This?
+      \newblock \url{http://www.joelonsoftware.com/items/2006/08/01.html}
+    \bibitem{unclebob}
+      Robert Martin
+      \newblock Functional Programming Basics
+      \newblock \url{http://pragprog.com/magazines/2013-01/functional-programming-basics}
     \bibitem{carmack}
       John Carmack
       \newblock Functional Programming in C++
