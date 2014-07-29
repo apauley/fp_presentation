@@ -20,6 +20,16 @@ http://tug.org/mactex/morepackages.html
 
 ## Previous Presentations
 
+### Jozi JUG
+#### Discovery Forum in Sandton, Johannesburg
+#### July 28, 2014
+
+  https://www.youtube.com/watch?v=PUqgCxurM0Y
+
+  http://www.slideshare.net/AndreasPauley/an-introduction-to-functional-programming-at-the-jozi-java-user-group
+
+  http://www.meetup.com/Jozi-JUG/events/193527672/
+
 ### DeveloperUG
 #### Microsoft Campus in Bryanston, Johannesburg
 #### March 11, 2014
